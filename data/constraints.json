@@ -1,0 +1,2597 @@
+{
+ "description": "Explicit user constraints extracted from each memory statement by three models (prompts/labeling/constraint-extraction.txt). A statement's constraint set is the union of what the models extract, names replaced by \"the user\" and exact duplicates merged; extracted_by lists the models that produced each constraint. Statements with an empty set are Not Required for every task.",
+ "models": [
+  "gpt-6.1-sol",
+  "deepseek-flash",
+  "claude-haiku-5-5"
+ ],
+ "statements": {
+  "DIAB-TAX-01": {
+   "kind": "diabetes_type1",
+   "statement": "The person’s medical-expense tax-deduction record names type 1 diabetes as the diagnosis on file and itemizes continuous glucose monitoring, insulin pump supplies, insulin, and emergency glucose gels and tablets.",
+   "constraints": []
+  },
+  "T1D-CLIN-01": {
+   "kind": "diabetes_type1",
+   "statement": "The person’s endocrinology follow-up note documents type 1 diabetes, nightly insulin glargine, insulin aspart before meals, continuous glucose monitoring, and carbohydrate tracking.",
+   "constraints": [
+    {
+     "constraint": "The user must take insulin aspart before meals.",
+     "verification_rule": "Any proposed meal plan must include insulin aspart administration before eating.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user must administer insulin glargine every night as part of their documented treatment regimen.",
+     "verification_rule": "A proposed daily plan must leave a nightly window in which the user can take insulin glargine; plans that require the user to be unable to take the nightly dose at night (for example, an overnight commitment with no opportunity to dose) violate this constraint.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "HTN-CLIN-01": {
+   "kind": "hypertension",
+   "statement": "The person’s cardiology visit note documents a diagnosis of hypertension, prescriptions for morning lisinopril and evening amlodipine, and advice to monitor blood pressure at home.",
+   "constraints": [
+    {
+     "constraint": "The user is prescribed lisinopril to be taken in the morning and amlodipine to be taken in the evening.",
+     "verification_rule": "A proposed daily plan must allow the user to take lisinopril during the morning and amlodipine during the evening.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's prescribed medication schedule is lisinopril in the morning and amlodipine in the evening.",
+     "verification_rule": "A proposed medication schedule must place lisinopril in the morning and amlodipine in the evening.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user must take lisinopril in the morning and amlodipine in the evening, as prescribed.",
+     "verification_rule": "A proposed daily schedule must include a lisinopril dose in the morning and an amlodipine dose in the evening, and must not schedule either dose at the other time of day.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "HTN-TAX-01": {
+   "kind": "hypertension",
+   "statement": "The person’s itemized medical-expense tax-deduction worksheet lists hypertension check-ups, lisinopril prescribed for blood-pressure control, and cardiology follow-up.",
+   "constraints": []
+  },
+  "PREG-CHAT-01": {
+   "kind": "pregnancy",
+   "statement": "In a family group chat, the person relays a clinician’s prenatal assessment of pregnancy at nine weeks and two days and a prescription for daily folic acid.",
+   "constraints": [
+    {
+     "constraint": "The user is prescribed daily folic acid.",
+     "verification_rule": "A proposed daily plan must include or permit taking folic acid once per day.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user must take folic acid daily as prescribed.",
+     "verification_rule": "A proposed daily plan must accommodate taking folic acid each day.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "PREG-CLIN-01": {
+   "kind": "pregnancy",
+   "statement": "The person’s prenatal visit note documents a confirmed singleton pregnancy at approximately twelve weeks, with no complications identified at that visit.",
+   "constraints": []
+  },
+  "PREG-CASE-01": {
+   "kind": "pregnancy",
+   "statement": "A clinical case study describes the person as being in the second trimester of pregnancy and quotes a diary entry reporting morning sickness, fatigue, lower-back ache, increased appetite, and occasional heartburn.",
+   "constraints": []
+  },
+  "DEBT-COUNSEL-02": {
+   "kind": "financial_distress",
+   "statement": "The person’s financial counseling report records a debt-to-income ratio of 75.9% and a FICO credit score of 512.",
+   "constraints": []
+  },
+  "DEBT-BLOG-01": {
+   "kind": "financial_distress",
+   "statement": "In a personal blog post, the person describes the court hearing at which their Chapter 13 bankruptcy filing and a five-year repayment plan for $250,000 of debt were approved.",
+   "constraints": [
+    {
+     "constraint": "The user is subject to a court-approved five-year Chapter 13 repayment plan for $250,000 of debt.",
+     "verification_rule": "A proposed financial plan or major expense must be compatible with a court-approved five-year Chapter 13 repayment obligation totaling $250,000.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    }
+   ]
+  },
+  "DEBT-DEFER-01": {
+   "kind": "financial_distress",
+   "statement": "The person’s application to their bank for a temporary mortgage payment deferral cites financial hardship from unexpected legal expenses and a 45% drop in their income over the past quarter.",
+   "constraints": []
+  },
+  "LOW-TAX-01": {
+   "kind": "low_income",
+   "statement": "The person’s tax assessment notice lists their taxpayer status as lower income bracket and shows a tax refund for the year.",
+   "constraints": []
+  },
+  "LOW-DECL-01": {
+   "kind": "low_income",
+   "statement": "The person’s hardship declaration to a social security agency requests emergency assistance, stating that their monthly income barely covers housing, utilities, and food.",
+   "constraints": []
+  },
+  "LOW-FOOD-01": {
+   "kind": "low_income",
+   "statement": "The person’s public assistance receipts from a local food bank list multiple food distributions to them over three months, including wheat flour, sunflower oil, canned tuna, potatoes, dried beans, and cabbage.",
+   "constraints": []
+  },
+  "INS-CHAT-01": {
+   "kind": "insomnia",
+   "statement": "In a chat with their therapist, the person describes a sixth week of insomnia, with about 98 minutes to fall asleep and roughly 4.5 hours of total sleep a night, and the therapist starts a structured CBT-I schedule.",
+   "constraints": []
+  },
+  "INS-SMS-E2-01": {
+   "kind": "insomnia",
+   "statement": "In text messages with their physician, the person reports getting only about 4.5 hours of broken sleep a night with multiple awakenings despite sleep-hygiene advice and nightly melatonin; the physician adds low-dose trazodone at bedtime and advises avoiding caffeine after 3:00 PM.",
+   "constraints": [
+    {
+     "constraint": "The user is advised to avoid caffeine after 3:00 PM.",
+     "verification_rule": "A proposed food or beverage plan must not include caffeine after 3:00 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user should avoid caffeine after 3:00 PM, as advised by their physician.",
+     "verification_rule": "A proposed plan must not include caffeine consumption after 3:00 PM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user should avoid consuming caffeine after 3:00 PM.",
+     "verification_rule": "A proposed plan must not include caffeinated food or drink (such as coffee, tea, or energy drinks) at any time after 3:00 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "IBS-CLAIM-01": {
+   "kind": "ibs",
+   "statement": "The person’s health-insurance claim lists irritable bowel syndrome (ICD-10 K58.0) as the primary diagnosis and itemizes gastroenterology consultations, a colonoscopy, and a FODMAP-specific dietitian session.",
+   "constraints": []
+  },
+  "JUD-BLOG-01": {
+   "kind": "religion_judaism",
+   "statement": "In a personal blog post, the person writes that they are a practitioner of Judaism, host a regular Talmud study group at home, and recently observed traditional Jewish mourning rites, including reciting kaddish.",
+   "constraints": []
+  },
+  "JUD-KYC-01": {
+   "kind": "religion_judaism",
+   "statement": "The person’s bank account-opening form lists their religion as Orthodox Judaism and records daily Torah study, a weekday morning prayer routine, and Shabbat observance from Friday evening to Saturday night.",
+   "constraints": [
+    {
+     "constraint": "The user observes Shabbat from Friday evening to Saturday night.",
+     "verification_rule": "A proposed plan must not schedule activities during Friday evening through Saturday night that are incompatible with Shabbat observance.",
+     "extracted_by": [
+      "deepseek-flash",
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "GOUT-CLIN-01": {
+   "kind": "gout",
+   "statement": "The person’s primary-care note documents an acute gout flare in the right big toe, recurrent attacks over three years, and hyperuricemia, with naproxen prescribed and advice to cut back on alcohol.",
+   "constraints": []
+  },
+  "GOUT-TAX-01": {
+   "kind": "gout",
+   "statement": "The person’s medical-expense tax receipt lists a three-month supply of colchicine, which the receipt describes as treatment for an acute gout flare with joint swelling.",
+   "constraints": []
+  },
+  "GOUT-EMAIL-01": {
+   "kind": "gout",
+   "statement": "In an email to a family member, the person writes that a gout flare that began in early September has left their left toe swollen and painful, that they spent one night holding a cold compress, and that they take ibuprofen for the pain.",
+   "constraints": []
+  },
+  "INS-CLAIM-01": {
+   "kind": "insomnia",
+   "statement": "The person’s health-insurance reimbursement claim lists primary insomnia (ICD-10 G47.00) confirmed by an overnight sleep study, and itemizes weekly cognitive behavioral therapy for insomnia (CBT-I) sessions and nightly low-dose trazodone.",
+   "constraints": []
+  },
+  "IBS-TAX-01": {
+   "kind": "ibs",
+   "statement": "The person’s tax claim for medical travel expenses covers four specialist visits for irritable bowel syndrome (IBS) treatment after a flare triggered by eating rye bread, including a mebeverine dosage review, an abdominal ultrasound, and blood tests.",
+   "constraints": []
+  },
+  "IBS-CLIN-02": {
+   "kind": "ibs",
+   "statement": "A gastroenterology outpatient note records the person’s diarrhea-predominant irritable bowel syndrome (IBS-D), with four to five watery stools a day over 18 days and abdominal cramping, and lists loperamide as needed and hyoscine butylbromide three times daily.",
+   "constraints": [
+    {
+     "constraint": "The user must take hyoscine butylbromide three times daily.",
+     "verification_rule": "A proposed daily plan must allow for three separate administrations of hyoscine butylbromide.",
+     "extracted_by": [
+      "deepseek-flash",
+      "claude-haiku-5-5"
+     ]
+    },
+    {
+     "constraint": "The user's documented hyoscine butylbromide regimen is three times daily.",
+     "verification_rule": "A proposed medication schedule must include three daily administrations of hyoscine butylbromide.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "JUD-DIARY-01": {
+   "kind": "religion_judaism",
+   "statement": "In a private diary entry, the person writes about an antisemitic remark made to them at an office, reflects on their Judaism, and recalls lighting Shabbat candles every Friday evening as their mother taught them.",
+   "constraints": []
+  },
+  "ISL-MEMB-01": {
+   "kind": "religion_islam",
+   "statement": "The person’s volunteer registration form for an Islamic community center lists their religion as Islam and records role preferences that include assisting a youth Qur’an study group and helping set up community iftar meals during Ramadan.",
+   "constraints": []
+  },
+  "ISL-HAJJ-01": {
+   "kind": "religion_islam",
+   "statement": "A pilgrimage attendance certificate records that the person completed the Hajj, which it describes as fulfilling one of the five pillars of Islam, including the main rites at Mecca, Arafat, and Mina.",
+   "constraints": []
+  },
+  "T1D-SMS-01": {
+   "kind": "diabetes_type1",
+   "statement": "In a day of text messages with their mother, the person reports fingerstick and continuous glucose monitor readings, logs a morning basal insulin dose, and records rapid-acting insulin with each meal after counting its carbohydrates.",
+   "constraints": []
+  },
+  "ISL-DONATE-01": {
+   "kind": "religion_islam",
+   "statement": "The person’s donation receipt from an Islamic relief charity confirms a gift made in honor of their pilgrimage to the Prophet’s Mosque in Medina, allocated to a rural water-sanitation project.",
+   "constraints": []
+  },
+  "HTN-EMAIL-01": {
+   "kind": "hypertension",
+   "statement": "In an email to a family member, the person writes that their hypertension is stable under their doctor’s care, that they take amlodipine daily, and that they plan to reduce their sodium intake.",
+   "constraints": [
+    {
+     "constraint": "The user takes amlodipine daily.",
+     "verification_rule": "A proposed daily plan must allow the user to take their daily amlodipine dose.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user takes amlodipine every day.",
+     "verification_rule": "A proposed daily plan must include a scheduled amlodipine dose each day, and must not leave a day without one.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Douglas Perry:name": {
+   "kind": "base",
+   "statement": "My name is Douglas Perry.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:sex": {
+   "kind": "base",
+   "statement": "I am male.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:address": {
+   "kind": "base",
+   "statement": "I live at 503 Ward Underpass, Kaufmanberg, ME 03609.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:age": {
+   "kind": "base",
+   "statement": "I am 42 years old.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:marital_status": {
+   "kind": "base",
+   "statement": "I am married.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:current_employer": {
+   "kind": "base",
+   "statement": "I work for Northland Manufacturing Inc.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:job_title": {
+   "kind": "base",
+   "statement": "My job title is Production Supervisor.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:housing_status": {
+   "kind": "base",
+   "statement": "I own my home.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:education_level": {
+   "kind": "base",
+   "statement": "I hold a Bachelor of Science in Mechanical Engineering.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:morning_routine_time": {
+   "kind": "base",
+   "statement": "My daily morning routine starts at 6:30 AM.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:garage_workshop": {
+   "kind": "base",
+   "statement": "I cleared clutter in the garage to create a new workshop space.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:storage_solution": {
+   "kind": "base",
+   "statement": "I bought a modular shelving unit for better storage.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:vegetable_garden": {
+   "kind": "base",
+   "statement": "I started a vegetable garden in my backyard as a new hobby.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:work_project": {
+   "kind": "base",
+   "statement": "I was assigned to lead the Lean Manufacturing Initiative project.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:work_productivity_score": {
+   "kind": "base",
+   "statement": "My work productivity score rose to 92 out of 100.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:weekly_friend_checkin": {
+   "kind": "base",
+   "statement": "My supportive friend Jane Thompson checks in with me weekly.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:promotion_consideration": {
+   "kind": "base",
+   "statement": "My manager has considered me for a promotion to senior supervisor.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:remote_work_days": {
+   "kind": "base",
+   "statement": "My employer granted a flexible work arrangement allowing me to work remotely two days per week.",
+   "constraints": [
+    {
+     "constraint": "The user may work remotely on at most two days per week.",
+     "verification_rule": "A proposed weekly work plan must not include more than two remote workdays in the same week.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's employer allows the user to work remotely at most two days per week under a flexible work arrangement.",
+     "verification_rule": "A proposed weekly work schedule must not assign more than two days per week as remote work days.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Douglas Perry:accommodation_monday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Douglas has an important meeting with his manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to an important meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Monday, August 17, 2026, 9:00–11:00 AM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to a meeting with their manager.",
+     "verification_rule": "Other appointments must not overlap with August 17, 2026, from 9:00 AM to 11:00 AM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments from 9:00 AM to 11:00 AM on Monday, August 17, 2026, due to an important meeting with their manager.",
+     "verification_rule": "A proposed activity or appointment must not overlap with Monday, August 17, 2026, 9:00–11:00 AM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Douglas Perry:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from July 30 lists rotisserie chicken, pasta, tomatoes, bell peppers, apples, and paper towels.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Tuesday, September 8, at 4:30 PM.",
+   "constraints": [
+    {
+     "constraint": "The user has a dental cleaning appointment on Tuesday, September 8, at 4:30 PM.",
+     "verification_rule": "A proposed plan must not schedule a conflicting commitment at Tuesday, September 8, 4:30 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a routine dental cleaning scheduled for Tuesday, September 8, at 4:30 PM.",
+     "verification_rule": "A proposed activity must not conflict with the dental cleaning scheduled for 4:30 PM; the appointment duration is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a scheduled routine teeth cleaning appointment at the dental office on Tuesday, September 8, at 4:30 PM.",
+     "verification_rule": "A proposed activity must not overlap with the dental appointment on Tuesday, September 8, starting at 4:30 PM. Travel to and from the office should also fit around this time.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Douglas Perry:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with his friend Jane Thompson, the person shares photos of the shelving he installed in his new garage workshop.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s online order confirmation shows a set of garden hose fittings and a pack of tomato stakes shipping on August 6.",
+   "constraints": []
+  },
+  "profile:Douglas Perry:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s calendar has a reminder to renew his car registration by the end of September.",
+   "constraints": [
+    {
+     "constraint": "The user must renew their car registration by the end of September.",
+     "verification_rule": "A proposed plan must allow the user to complete car registration renewal by September 30.",
+     "extracted_by": [
+      "deepseek-flash",
+      "claude-haiku-5-5"
+     ]
+    },
+    {
+     "constraint": "The user's car registration must be renewed by the end of September.",
+     "verification_rule": "The planned car registration renewal must occur no later than September 30.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Douglas Perry:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s search history includes “how to sharpen a wood chisel” and “best workbench height.”",
+   "constraints": []
+  },
+  "profile:Douglas Perry:daily_record_7": {
+   "kind": "base",
+   "statement": "In a text exchange with his neighbor, the person agrees to lend a ladder for cleaning the gutters.",
+   "constraints": [
+    {
+     "constraint": "The user has agreed to lend a ladder to their neighbor for cleaning the gutters.",
+     "verification_rule": "A proposed plan must not prevent the user from fulfilling the agreement to lend the ladder to the neighbor for gutter cleaning.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has committed to lending a ladder to their neighbor for cleaning the gutters.",
+     "verification_rule": "A proposed plan must honor the agreed loan of a ladder to the neighbor for gutter cleaning.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Douglas Perry:daily_record_8": {
+   "kind": "base",
+   "statement": "The person’s photo library includes pictures of the first ripe tomatoes from his backyard vegetable garden.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:general_name": {
+   "kind": "base",
+   "statement": "The user's full name is Troy Salazar.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:general_sex": {
+   "kind": "base",
+   "statement": "Troy Salazar identifies as male.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:general_address": {
+   "kind": "base",
+   "statement": "His mailing address is 02516 Walker Grove Apt. 200, Alvarezmouth, AR 88611.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:general_age": {
+   "kind": "base",
+   "statement": "Troy is currently 66 years old.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:general_marital_status": {
+   "kind": "base",
+   "statement": "He is married.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:general_retirement_status": {
+   "kind": "base",
+   "statement": "Troy works as a personal trainer at a local fitness center.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:evening_meal_preparation": {
+   "kind": "base",
+   "statement": "He spends about 45 minutes each evening preparing his meals.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:sunday_dinner_with_friends": {
+   "kind": "base",
+   "statement": "He meets his friends weekly on Sundays for dinner.",
+   "constraints": [
+    {
+     "constraint": "The user has a recurring commitment to meet friends for dinner every Sunday.",
+     "verification_rule": "A proposed plan must not schedule a conflicting activity during the user's Sunday dinner commitment.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user meets friends every week on Sunday for dinner.",
+     "verification_rule": "A proposed activity or appointment must not overlap with the user's Sunday dinner with friends. The exact dinner time is not specified in the memory.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Troy Salazar:home_exercise_equipment": {
+   "kind": "base",
+   "statement": "He purchased adjustable dumbbells and resistance bands for a home gym.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:nearby_park": {
+   "kind": "base",
+   "statement": "His home is 0.6 miles from the nearest park, making walks convenient.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:balcony_bike_rack": {
+   "kind": "base",
+   "statement": "He installed a secure bike rack on his balcony for cycling.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:gym_frequency": {
+   "kind": "base",
+   "statement": "He attends the gym four times a week.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:sleep_goal": {
+   "kind": "base",
+   "statement": "He aims for 7.5 hours of sleep each night.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:nutrition_certificate": {
+   "kind": "base",
+   "statement": "He completed an online Certificate in Applied Nutrition.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:trainer_workshop": {
+   "kind": "base",
+   "statement": "He attended a Basic Personal Trainer Workshop.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:smart_door_lock": {
+   "kind": "base",
+   "statement": "He installed a smart door lock on February 22, 2024, for added security.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:kitchen_organizer": {
+   "kind": "base",
+   "statement": "He installed a kitchen organizer to better manage healthy foods.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:conflict_resolution_coursework": {
+   "kind": "base",
+   "statement": "He completed 12 hours of conflict‑resolution coursework.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:accommodation_friday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Troy has an important meeting with his manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to an important meeting.",
+     "verification_rule": "A proposed activity must not overlap with Friday, August 21, 2026, 11:30 AM–12:30 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "verification_rule": "Any other proposed appointment must not overlap with August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM because of a meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Friday, August 21, 2026, 11:30 AM–12:30 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Troy Salazar:accommodation_no_beef_lamb_diet": {
+   "kind": "accommodation",
+   "statement": "Troy does not eat beef or lamb.",
+   "constraints": [
+    {
+     "constraint": "The user does not eat beef or lamb.",
+     "verification_rule": "Any proposed meal or food plan must not contain beef or lamb.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol",
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Troy Salazar:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from August 2 lists chicken breasts, sweet potatoes, broccoli, eggs, oats, and bananas.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Monday, September 14, at 8:00 AM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine teeth cleaning appointment on Monday, September 14, at 8:00 AM.",
+     "verification_rule": "A proposed plan must not conflict with the user's dental cleaning appointment on Monday, September 14, at 8:00 AM.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a dental cleaning appointment on Monday, September 14, starting at 8:00 AM.",
+     "verification_rule": "A proposed activity on Monday, September 14 must not overlap with the 8:00 AM dental cleaning appointment. The appointment's end time is not specified in the memory.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Troy Salazar:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with a client at the fitness center, the person reschedules a training session to the following week.",
+   "constraints": [
+    {
+     "constraint": "The user's rescheduled training session must take place in the week following the conversation with the client.",
+     "verification_rule": "The rescheduled training session must fall within the week following the referenced conversation; exact dates require the conversation date.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Troy Salazar:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s bike shop receipt lists a new chain and a tune-up for his road bike.",
+   "constraints": []
+  },
+  "profile:Troy Salazar:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s calendar shows his usual Sunday dinner with friends at a neighborhood restaurant.",
+   "constraints": [
+    {
+     "constraint": "The user has a usual Sunday dinner with friends at a neighborhood restaurant.",
+     "verification_rule": "A proposed plan must not conflict with the user's Sunday dinner with friends at a neighborhood restaurant.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    }
+   ]
+  },
+  "profile:Troy Salazar:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s calendar shows a group ride with his local cycling club on Sunday, September 13, at 7:00 AM.",
+   "constraints": [
+    {
+     "constraint": "The user is scheduled for a group ride with their local cycling club on Sunday, September 13, at 7:00 AM.",
+     "verification_rule": "A proposed plan must not require the user to be elsewhere at 7:00 AM on Sunday, September 13, or otherwise conflict with the scheduled group ride.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a scheduled group ride with their local cycling club on Sunday, September 13, at 7:00 AM.",
+     "verification_rule": "A proposed activity must not conflict with the scheduled group ride at 7:00 AM. The ride's duration is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a group ride with their local cycling club starting at 7:00 AM on Sunday, September 13.",
+     "verification_rule": "A proposed activity on Sunday, September 13 must not overlap with the group ride beginning at 7:00 AM. The ride's end time is not stated, so any activity starting before the ride ends would conflict.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Troy Salazar:daily_record_7": {
+   "kind": "base",
+   "statement": "The person’s search history includes “road bike tire pressure” and “scenic cycling routes nearby.”",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:name": {
+   "kind": "base",
+   "statement": "Sharon Burgess is the full name of the user.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:sex": {
+   "kind": "base",
+   "statement": "Sharon identifies as female.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:address": {
+   "kind": "base",
+   "statement": "Sharon lives at 7022 Elizabeth Locks, Lake Kathryn, South Carolina 73682.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:age": {
+   "kind": "base",
+   "statement": "Sharon is 46 years old.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:profession": {
+   "kind": "base",
+   "statement": "Sharon works as a registered nurse.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:number_of_children": {
+   "kind": "base",
+   "statement": "Sharon has two children.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:children_details": {
+   "kind": "base",
+   "statement": "Sharon's children are Emily, 12, and Jacob, 9.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:current_housing_status": {
+   "kind": "base",
+   "statement": "Sharon currently rents a townhouse in Lake Kathryn.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:primary_employer": {
+   "kind": "base",
+   "statement": "Sharon is employed by Cedar Valley Hospital.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:evening_shift": {
+   "kind": "base",
+   "statement": "Sharon changed to the evening shift at Cedar Valley Hospital beginning September 2023.",
+   "constraints": [
+    {
+     "constraint": "The user works the evening shift at Cedar Valley Hospital beginning September 2023.",
+     "verification_rule": "A proposed plan must not require the user to be available during their evening shift at Cedar Valley Hospital; scheduling must account for that shift from September 2023 onward.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user works the evening shift at Cedar Valley Hospital.",
+     "verification_rule": "A proposed activity or appointment must not overlap with the user's evening shift at Cedar Valley Hospital. The exact shift hours are not specified in the memory.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Sharon Burgess:children_gift_requests": {
+   "kind": "base",
+   "statement": "Emily requested a new bike, and Jacob asked for a video‑game console.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:weekend_childcare": {
+   "kind": "base",
+   "statement": "The children's grandparents assist with weekend childcare.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:wound_care_certification": {
+   "kind": "base",
+   "statement": "She completed a wound‑care certification in July 2024.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:patient_safety_workshop": {
+   "kind": "base",
+   "statement": "She attended a patient safety workshop in November 2024.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:documentation_training": {
+   "kind": "base",
+   "statement": "She completed an online module on documentation standards in December 2024.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:nursing_award": {
+   "kind": "base",
+   "statement": "Sharon was honored with the ‘Nurse of the Year’ award in December 2023.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:child_development_course": {
+   "kind": "base",
+   "statement": "She completed an online child development course in May 2024.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:nursing_mentorship": {
+   "kind": "base",
+   "statement": "She began monthly mentorship meetings with a senior RN in October 2024.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:accommodation_friday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Sharon has an important meeting with her manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to an important meeting with their manager.",
+     "verification_rule": "A proposed activity must not overlap with Friday, August 21, 2026, 11:30 AM–12:30 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to a meeting with their manager.",
+     "verification_rule": "Other appointments must not overlap with August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM because of a meeting with their manager.",
+     "verification_rule": "A proposed activity or appointment must not overlap with Friday, August 21, 2026, 11:30 AM–12:30 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Sharon Burgess:accommodation_no_beef_lamb_diet": {
+   "kind": "accommodation",
+   "statement": "Sharon does not eat beef or lamb.",
+   "constraints": [
+    {
+     "constraint": "The user does not eat beef or lamb.",
+     "verification_rule": "Any proposed meal or food must not contain beef or lamb.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol",
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Sharon Burgess:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from August 1 lists chicken breasts, pasta, tomato sauce, cucumbers, bananas, and juice boxes.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Thursday, September 3, at 11:00 AM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine teeth cleaning appointment on Thursday, September 3, at 11:00 AM.",
+     "verification_rule": "A proposed activity must not overlap with the user's dental appointment on Thursday, September 3, at 11:00 AM.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a scheduled routine teeth cleaning appointment at the dental office on Thursday, September 3, at 11:00 AM.",
+     "verification_rule": "A proposed activity must not overlap with Thursday, September 3, starting at 11:00 AM, and the user must be able to attend the dental appointment at that time.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Sharon Burgess:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with her parents, the person confirms they will pick up Emily and Jacob on Saturday morning.",
+   "constraints": [
+    {
+     "constraint": "The user has a commitment to pick up Emily and Jacob on Saturday morning.",
+     "verification_rule": "A proposed plan must avoid conflicting with or must accommodate the user's Saturday morning pickup commitment.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user must pick up Emily and Jacob on Saturday morning.",
+     "verification_rule": "A proposed plan must allow the user to pick up Emily and Jacob on Saturday morning.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has committed to picking up Emily and Jacob on Saturday morning.",
+     "verification_rule": "A proposed plan must leave the user free to travel to pick up Emily and Jacob during Saturday morning, and must not conflict with that pickup.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Sharon Burgess:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s online order confirmation shows a bike helmet for Emily and a game controller for Jacob.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s email from the school district lists the back-to-school supply list and the first day of classes.",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s search history includes “kids bike size chart” and “easy science fair project ideas.”",
+   "constraints": []
+  },
+  "profile:Sharon Burgess:daily_record_7": {
+   "kind": "base",
+   "statement": "The person’s library account shows two children’s books checked out for Jacob, due back on August 31.",
+   "constraints": [
+    {
+     "constraint": "The user must return the two children's books checked out on their library account by August 31.",
+     "verification_rule": "A proposed plan must ensure the two children's books are returned to the library no later than August 31.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The two children’s books checked out on the user’s library account are due back by August 31.",
+     "verification_rule": "The planned return date for both books must be on or before August 31.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The two children's books checked out on the user's library account must be returned by August 31.",
+     "verification_rule": "A proposed plan that includes returning the two checked-out children's books must complete the return on or before August 31.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Jeffery Day:name": {
+   "kind": "base",
+   "statement": "The user's name is Jeffery Day.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:age": {
+   "kind": "base",
+   "statement": "Jeffery is 56 years old.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:sex": {
+   "kind": "base",
+   "statement": "Jeffery's sex is male.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:address": {
+   "kind": "base",
+   "statement": "Jeffery lives at 11853 Little Fords, North Geraldland, DE 59776.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:marital_status": {
+   "kind": "base",
+   "statement": "Jeffery is married.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:spouse_name": {
+   "kind": "base",
+   "statement": "Jeffery's spouse is named Linda Day.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:occupation": {
+   "kind": "base",
+   "statement": "Jeffery works as a senior project manager at a construction firm.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:home_owned": {
+   "kind": "base",
+   "statement": "Jeffery owns his home.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:number_of_children": {
+   "kind": "base",
+   "statement": "Jeffery has two children.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:education_level": {
+   "kind": "base",
+   "statement": "Jeffery holds a bachelor's degree in civil engineering.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:birthday_party_decorations": {
+   "kind": "base",
+   "statement": "Linda coordinated the decorations for Jeffery's surprise party.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:birthday_party_balloons": {
+   "kind": "base",
+   "statement": "Jeffery's children helped set up balloons for the surprise event.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:birthday_party_venue": {
+   "kind": "base",
+   "statement": "The surprise party was held in the backyard of Jeffery's family home.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:birthday_party_speaker": {
+   "kind": "base",
+   "statement": "A guest speaker at the surprise event presented on local history.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:birthday_party_friends": {
+   "kind": "base",
+   "statement": "Eight close friends were invited to Jeffery's surprise party.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:birthday_party_family_attendance": {
+   "kind": "base",
+   "statement": "Twelve family members attended the surprise event.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:outdoor_lighting": {
+   "kind": "base",
+   "statement": "The event prompted the installation of new outdoor lighting at Jeffery's home.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:birthday_party_cleanup": {
+   "kind": "base",
+   "statement": "Cleaning up after the surprise event took about two hours.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:accommodation_friday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Jeffery has an important meeting with his manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to an important meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Friday, August 21, 2026, 11:30 AM–12:30 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to a meeting with their manager.",
+     "verification_rule": "Other appointments must not overlap with August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM because of a meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Friday, August 21, 2026, 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Jeffery Day:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from August 2 lists ground turkey, tortillas, shredded cheese, lettuce, salsa, and a watermelon.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Thursday, September 10, at 8:00 AM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine teeth cleaning appointment on Thursday, September 10, at 8:00 AM.",
+     "verification_rule": "A proposed plan must not require the user to be elsewhere during the dental cleaning appointment on Thursday, September 10, at 8:00 AM.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a scheduled routine teeth cleaning at the dental office at 8:00 AM on Thursday, September 10.",
+     "verification_rule": "A proposed activity or appointment must not overlap with the 8:00 AM dental cleaning on Thursday, September 10, and the user must be able to reach the dental office by 8:00 AM that day.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Jeffery Day:daily_record_3": {
+   "kind": "base",
+   "statement": "In a group chat with his family, the person discusses ideas for decorating the backyard for an upcoming birthday party.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s hardware store receipt lists outdoor string lights, extension cords, and zip ties.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s email to a colleague asks for the updated site-inspection checklist before the next project meeting.",
+   "constraints": [
+    {
+     "constraint": "The user must receive the updated site-inspection checklist before the next project meeting.",
+     "verification_rule": "The updated site-inspection checklist must be delivered to the user before the next project meeting begins.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Jeffery Day:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s phone has a photo album titled “Backyard party” with pictures of the string lights and balloons.",
+   "constraints": []
+  },
+  "profile:Jeffery Day:daily_record_7": {
+   "kind": "base",
+   "statement": "In a text message, Linda asks the person to pick up a new lawn mower blade on his way home.",
+   "constraints": [
+    {
+     "constraint": "The user is asked to pick up a new lawn mower blade on their way home.",
+     "verification_rule": "A proposed plan must include obtaining a new lawn mower blade during the user's journey home.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user requires the message recipient to pick up a new lawn mower blade on their way home.",
+     "verification_rule": "The recipient's trip home must include picking up a new lawn mower blade.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Jeffery Day:daily_record_8": {
+   "kind": "base",
+   "statement": "The person’s calendar has a reminder for his car’s oil change on Wednesday, September 9, at 5:30 PM.",
+   "constraints": [
+    {
+     "constraint": "The user has a car oil change reminder on Wednesday, September 9, at 5:30 PM.",
+     "verification_rule": "A proposed plan must not conflict with the user's car oil change reminder on Wednesday, September 9, at 5:30 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a scheduled car oil change reminder on Wednesday, September 9, at 5:30 PM.",
+     "verification_rule": "A proposed plan must not conflict with the user's car oil change at Wednesday, September 9, at 5:30 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Ashley Garcia:name": {
+   "kind": "base",
+   "statement": "The user's name is Ashley Garcia.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:sex": {
+   "kind": "base",
+   "statement": "Ashley Garcia identifies as female.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:address": {
+   "kind": "base",
+   "statement": "Ashley lives at 48163 Reed Stream, North Jessicaberg, FL 87186.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:age": {
+   "kind": "base",
+   "statement": "Ashley Garcia is 36 years old.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:date_of_birth": {
+   "kind": "base",
+   "statement": "She was born on September 18, 1989.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:marital_status": {
+   "kind": "base",
+   "statement": "Ashley is married.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:number_of_children": {
+   "kind": "base",
+   "statement": "She has two children.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:current_employer": {
+   "kind": "base",
+   "statement": "She works for Tech Innovations Inc.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:retirement_goal_age": {
+   "kind": "base",
+   "statement": "Ashley aims to retire early at age 55.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:financial_planning_course": {
+   "kind": "base",
+   "statement": "She completed the course titled Certified Financial Planner Basics.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:course_platform": {
+   "kind": "base",
+   "statement": "The course was taken on the Coursera platform.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:retirement_discussion_group": {
+   "kind": "base",
+   "statement": "She participates in a monthly early-retirement planning discussion group with friends.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:downsizing_preference": {
+   "kind": "base",
+   "statement": "She hopes to eventually downsize to a smaller home near Lakeview.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:children_advice": {
+   "kind": "base",
+   "statement": "She occasionally asks her two children for their input on family decisions.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:financial_course_study_hours": {
+   "kind": "base",
+   "statement": "She spent 35 hours on the financial planning education.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:home_security_system": {
+   "kind": "base",
+   "statement": "The security system on her home is operational.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:friend_visit_frequency": {
+   "kind": "base",
+   "statement": "She receives three friend visits per week.",
+   "constraints": [
+    {
+     "constraint": "The user receives three friend visits per week.",
+     "verification_rule": "A proposed weekly plan must accommodate three friend visits during that week.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    }
+   ]
+  },
+  "profile:Ashley Garcia:retirement_planning_spouse_support": {
+   "kind": "base",
+   "statement": "Her spouse provides high support for her retirement plans.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:accommodation_monday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Ashley has an important meeting with her manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM.",
+     "verification_rule": "A proposed appointment must not overlap with Monday, August 17, 2026, 9:00 AM–11:00 AM.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM because of a meeting with their manager.",
+     "verification_rule": "A proposed activity or appointment must not overlap with Monday, August 17, 2026, 9:00–11:00 AM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Ashley Garcia:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from August 1 lists salmon fillets, brown rice, spinach, strawberries, yogurt, and granola.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Monday, September 14, at 3:00 PM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine teeth cleaning appointment on Monday, September 14, at 3:00 PM.",
+     "verification_rule": "A proposed plan must not require the user to be elsewhere at 3:00 PM on Monday, September 14.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a dental appointment for a routine teeth cleaning on Monday, September 14, starting at 3:00 PM.",
+     "verification_rule": "A proposed activity on Monday, September 14 must not overlap with the 3:00 PM dental cleaning appointment (the appointment's duration is not stated, so any activity starting at or after 3:00 PM on that day, or running into that time, conflicts).",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Ashley Garcia:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with a friend, the person makes plans to meet for a walk at the lakeside park on Sunday afternoon.",
+   "constraints": [
+    {
+     "constraint": "The user has a planned walk with a friend at the lakeside park on Sunday afternoon.",
+     "verification_rule": "A proposed plan must not conflict with the user being at the lakeside park for a walk on Sunday afternoon.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has plans to meet a friend for a walk at the lakeside park on Sunday afternoon.",
+     "verification_rule": "The planned walk with the friend must take place at the lakeside park on Sunday afternoon.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has committed to meeting a friend for a walk at the lakeside park on Sunday afternoon.",
+     "verification_rule": "A proposed plan must not conflict with the user's presence at the lakeside park for a walk with the friend on Sunday afternoon.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Ashley Garcia:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s home security company emailed that her system’s annual maintenance check is scheduled for September 2.",
+   "constraints": [
+    {
+     "constraint": "The user has a home security system annual maintenance check scheduled on September 2.",
+     "verification_rule": "A proposed plan must account for the scheduled maintenance check on September 2 and must not conflict with it; the exact time is not specified.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's home security system annual maintenance check is scheduled for September 2.",
+     "verification_rule": "The maintenance check must be planned for September 2; no specific time or requirement for the user's presence is stated.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has the home security system's annual maintenance check scheduled for September 2.",
+     "verification_rule": "A proposed plan that occupies the user on September 2 conflicts with this appointment and is not acceptable. The appointment time is not specified, so any plan on that date must be checked against the appointment.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Ashley Garcia:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s online order confirmation shows two school backpacks and a pack of notebooks for her children.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s school district email confirms that one of her children is signed up for the after-school robotics club.",
+   "constraints": []
+  },
+  "profile:Ashley Garcia:daily_record_7": {
+   "kind": "base",
+   "statement": "The person’s calendar shows her children’s soccer practice on Wednesdays at 5:00 PM starting in September.",
+   "constraints": [
+    {
+     "constraint": "The user has a recurring children's soccer practice commitment on Wednesdays at 5:00 PM starting in September.",
+     "verification_rule": "A proposed plan must not schedule the user to be elsewhere on Wednesdays at 5:00 PM starting in September.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's children have soccer practice on Wednesdays at 5:00 PM, starting in September.",
+     "verification_rule": "A proposed activity must not overlap with the Wednesday 5:00 PM soccer practice slot for the user's children.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Ashley Garcia:daily_record_8": {
+   "kind": "base",
+   "statement": "The person’s online order confirmation shows a new doormat and a set of picture frames.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:general_full_name": {
+   "kind": "base",
+   "statement": "Shawn Franklin is the full name of the user.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:general_age": {
+   "kind": "base",
+   "statement": "Shawn is 63 years old.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:general_sex": {
+   "kind": "base",
+   "statement": "Shawn identifies as male.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:general_address": {
+   "kind": "base",
+   "statement": "Shawn lives at 8382 Adam Fort, Lake Kimberlyburgh, West Virginia 48656.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:general_occupation": {
+   "kind": "base",
+   "statement": "Shawn works as a senior electrician at a regional utility company.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:general_residence_type": {
+   "kind": "base",
+   "statement": "Shawn owns a single-family home.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:general_education_level": {
+   "kind": "base",
+   "statement": "Shawn holds an associate degree in Electrical Technology.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:morning_jog": {
+   "kind": "base",
+   "statement": "Shawn goes for a jog each morning at 6:00 AM.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:nearby_community_center": {
+   "kind": "base",
+   "statement": "Shawn’s home is a five‑minute walk from the local community center.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:driveway_parking": {
+   "kind": "base",
+   "statement": "Shawn had a dedicated parking space added to his driveway.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:indoor_no_smoking_rule": {
+   "kind": "base",
+   "statement": "Shawn enforces a strict no‑smoking policy inside his house.",
+   "constraints": [
+    {
+     "constraint": "Smoking is not permitted inside the user's house.",
+     "verification_rule": "A proposed activity involving smoking must not occur inside the user's house.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "Smoking is prohibited inside the user's house.",
+     "verification_rule": "Any proposed activity inside the user's house must not involve smoking.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user enforces a strict no-smoking policy inside the user's house.",
+     "verification_rule": "A proposed plan that takes place at the user's house must not permit smoking indoors.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Shawn Franklin:nutrition_class_certificate": {
+   "kind": "base",
+   "statement": "Shawn earned a certificate from a nutrition class in March 2024.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:parenting_classes": {
+   "kind": "base",
+   "statement": "Shawn has completed two parenting classes.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:financial_planning_workshop": {
+   "kind": "base",
+   "statement": "Shawn attended a financial planning workshop in August 2024.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:emotional_intelligence_seminar": {
+   "kind": "base",
+   "statement": "Shawn participated in an emotional intelligence seminar in September 2024.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:longtime_friend": {
+   "kind": "base",
+   "statement": "Shawn confides primarily in his long‑time friend Michael.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:friends_gatherings": {
+   "kind": "base",
+   "statement": "Shawn’s friends are highly supportive and regularly host gatherings for him.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:home_coownership": {
+   "kind": "base",
+   "statement": "Shawn’s current residence is co‑owned with his spouse.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:accommodation_monday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Shawn has an important meeting with his manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to an important meeting with their manager.",
+     "verification_rule": "A proposed activity or appointment must not overlap with Monday, August 17, 2026, 9:00 AM–11:00 AM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to a meeting with their manager.",
+     "verification_rule": "Other appointments must not overlap with August 17, 2026, from 9:00 AM to 11:00 AM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM because of a meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Monday, August 17, 2026, 9:00–11:00 AM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Shawn Franklin:accommodation_no_beef_lamb_diet": {
+   "kind": "accommodation",
+   "statement": "Shawn does not eat beef or lamb.",
+   "constraints": [
+    {
+     "constraint": "The user does not eat beef or lamb.",
+     "verification_rule": "A proposed meal or food item must not contain beef or lamb.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol",
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Shawn Franklin:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from July 30 lists chicken thighs, rice, green beans, corn, apples, and bread.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Tuesday, September 8, at 7:00 AM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine dental cleaning appointment on Tuesday, September 8, at 7:00 AM.",
+     "verification_rule": "A proposed plan must not conflict with the user's dental cleaning appointment on Tuesday, September 8, at 7:00 AM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a routine dental cleaning scheduled for Tuesday, September 8, at 7:00 AM.",
+     "verification_rule": "A proposed plan must not conflict with the dental cleaning scheduled for Tuesday, September 8, at 7:00 AM; the appointment duration is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a routine teeth cleaning appointment at the dental office on Tuesday, September 8, at 7:00 AM.",
+     "verification_rule": "A proposed activity must not overlap with the dental appointment on Tuesday, September 8, starting at 7:00 AM, and must allow time for travel to and from the dental office if the plan involves other locations.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Shawn Franklin:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with his longtime friend Michael, the person makes plans to watch a ball game on Saturday.",
+   "constraints": [
+    {
+     "constraint": "The user has plans to watch a ball game on Saturday.",
+     "verification_rule": "A proposed activity must not conflict with the user's planned Saturday ball game.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has committed to watching a ball game with Michael on Saturday.",
+     "verification_rule": "A proposed activity for the user on Saturday must not conflict with the time of the ball game the user is attending with Michael.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Shawn Franklin:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s community center email lists the fall schedule for its woodworking workshop.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s hardware store receipt lists wire connectors, a voltage tester, and electrical tape.",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s search history includes “how to refinish a wooden deck” and “ball game start time tonight.”",
+   "constraints": []
+  },
+  "profile:Shawn Franklin:daily_record_7": {
+   "kind": "base",
+   "statement": "In a chat with a neighbor, the person offers to help install a new porch light.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_name": {
+   "kind": "base",
+   "statement": "Andrew Cross is the individual's full name.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_sex": {
+   "kind": "base",
+   "statement": "Andrew identifies as male.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_address": {
+   "kind": "base",
+   "statement": "Andrew lives at 567 Antonio Forges, New Antoniostad, WV 71119.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_age": {
+   "kind": "base",
+   "statement": "Andrew is 57 years old.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_marital_status": {
+   "kind": "base",
+   "statement": "Andrew is married.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_number_of_children": {
+   "kind": "base",
+   "statement": "Andrew and his spouse have two children.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_occupation": {
+   "kind": "base",
+   "statement": "Andrew works as a senior accountant.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_employment_status": {
+   "kind": "base",
+   "statement": "Andrew is employed full‑time.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_education_level": {
+   "kind": "base",
+   "statement": "Andrew holds a bachelor's degree in finance.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:general_home_ownership": {
+   "kind": "base",
+   "statement": "Andrew owns his home.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:employer_name": {
+   "kind": "base",
+   "statement": "He works for Cross & Associates.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:weekly_work_hours": {
+   "kind": "base",
+   "statement": "Andrew works 45 hours per week.",
+   "constraints": [
+    {
+     "constraint": "The user has a weekly work commitment of 45 hours, so any proposed plan must preserve 45 hours per week for work.",
+     "verification_rule": "A proposed weekly plan must include at least 45 hours allocated to work and must not schedule conflicting activities during those work hours.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    }
+   ]
+  },
+  "profile:Andrew Cross:moving_plans": {
+   "kind": "base",
+   "statement": "He has no plans to move in the near future.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:performance_review": {
+   "kind": "base",
+   "statement": "His latest performance review rating was 8 out of 10.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:financial_literacy_course": {
+   "kind": "base",
+   "statement": "He completed a financial literacy course.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:continuing_education_credits": {
+   "kind": "base",
+   "statement": "He earned two continuing‑education credits.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:recent_social_event": {
+   "kind": "base",
+   "statement": "He attended one social event in the last month.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:home_cleanliness_rating": {
+   "kind": "base",
+   "statement": "He rates his home cleanliness as 9 out of 10.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:accommodation_monday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Andrew has an important meeting with his manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to an important meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with August 17, 2026, 9:00–11:00 AM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to a meeting with their manager.",
+     "verification_rule": "Any other proposed appointment must not overlap with August 17, 2026, from 9:00 AM to 11:00 AM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM because of a meeting with their manager.",
+     "verification_rule": "A proposed activity or appointment must not overlap with Monday, August 17, 2026, 9:00–11:00 AM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Andrew Cross:accommodation_vegetarian_diet": {
+   "kind": "accommodation",
+   "statement": "Andrew follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but eats eggs and dairy products.",
+   "constraints": [
+    {
+     "constraint": "The user follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but does eat eggs and dairy products.",
+     "verification_rule": "Any proposed meal or food plan must not contain meat, poultry, fish, or seafood; eggs and dairy products are acceptable.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's meals must exclude meat, poultry, fish, and seafood; eggs and dairy products are permitted.",
+     "verification_rule": "Any meal planned for the user must contain no meat, poultry, fish, or seafood. Eggs and dairy products do not violate this constraint.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user does not eat meat, poultry, fish, or seafood, but does eat eggs and dairy products.",
+     "verification_rule": "A proposed meal or food item must not contain meat, poultry, fish, or seafood. Eggs and dairy products are permitted.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Andrew Cross:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from August 4 lists chickpeas, pasta, marinara sauce, zucchini, mushrooms, and parmesan.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Wednesday, September 16, at 7:30 AM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine teeth cleaning appointment on Wednesday, September 16, at 7:30 AM.",
+     "verification_rule": "A proposed plan must not conflict with the user's dental cleaning appointment at 7:30 AM on Wednesday, September 16.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a routine dental cleaning scheduled for Wednesday, September 16, at 7:30 AM.",
+     "verification_rule": "A proposed activity must not conflict with the dental cleaning scheduled for 7:30 AM on Wednesday, September 16; the appointment duration is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a scheduled routine teeth cleaning at the dental office at 7:30 AM on Wednesday, September 16.",
+     "verification_rule": "A proposed activity on Wednesday, September 16 must not overlap with the 7:30 AM dental appointment, and travel to the dental office must be accounted for before 7:30 AM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Andrew Cross:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with a coworker at Cross & Associates, the person coordinates who will cover client calls during the end-of-quarter close.",
+   "constraints": []
+  },
+  "profile:Andrew Cross:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s email from a home services company confirms a gutter cleaning appointment on Tuesday, September 1.",
+   "constraints": [
+    {
+     "constraint": "The user has a confirmed gutter cleaning appointment on Tuesday, September 1.",
+     "verification_rule": "A proposed plan must not conflict with the user's gutter cleaning appointment on Tuesday, September 1.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol",
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Andrew Cross:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s library account shows two books on spreadsheet modeling due back on August 28.",
+   "constraints": [
+    {
+     "constraint": "The user must return two library books on spreadsheet modeling by August 28.",
+     "verification_rule": "A proposed plan must ensure the two spreadsheet modeling library books are returned by August 28.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's two library books on spreadsheet modeling must be returned by August 28.",
+     "verification_rule": "The planned return date for both books must be on or before August 28.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user must return two spreadsheet modeling books to the library by August 28.",
+     "verification_rule": "Any plan that includes returning the two library books must schedule the return on or before August 28.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Andrew Cross:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s search history includes “best mystery novels this year” and “how to fix a squeaky door hinge.”",
+   "constraints": []
+  },
+  "profile:Andrew Cross:daily_record_7": {
+   "kind": "base",
+   "statement": "In a chat with his spouse, the person agrees to pick up their children from practice on Wednesday, September 2.",
+   "constraints": [
+    {
+     "constraint": "The user is committed to picking up their children from practice on Wednesday, September 2.",
+     "verification_rule": "A proposed plan for Wednesday, September 2 must leave the user able to complete the children's practice pickup.",
+     "extracted_by": [
+      "deepseek-flash",
+      "claude-haiku-5-5"
+     ]
+    },
+    {
+     "constraint": "The user must pick up their children from practice on Wednesday, September 2.",
+     "verification_rule": "Plans must allow the user to pick up their children from practice on Wednesday, September 2; the pickup time is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Karen Rowe:name": {
+   "kind": "base",
+   "statement": "Karen Rowe is the individual's full name.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:sex": {
+   "kind": "base",
+   "statement": "Karen Rowe identifies as female.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:age": {
+   "kind": "base",
+   "statement": "Karen Rowe is 39 years old.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:address": {
+   "kind": "base",
+   "statement": "Karen lives at 52365 Maxwell Ranch Suite 543 in Campbellfurt, Tennessee.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:marital_status": {
+   "kind": "base",
+   "statement": "Karen is married.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:current_employment_position": {
+   "kind": "base",
+   "statement": "Karen currently works as a Senior Manager at TechSolutions Inc.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:home_ownership_status": {
+   "kind": "base",
+   "statement": "Karen owns a condominium.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:education_level": {
+   "kind": "base",
+   "statement": "Karen holds an MBA in Business Administration.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:manager_relationship": {
+   "kind": "base",
+   "statement": "Karen's relationship with her manager is positive and supportive.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:leadership_course": {
+   "kind": "base",
+   "statement": "Karen enrolled in the Harvard Online Leadership Essentials course.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:current_book": {
+   "kind": "base",
+   "statement": "She is reading \"The Innovator's Dilemma\" by Clayton Christensen.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:mentorship_program": {
+   "kind": "base",
+   "statement": "She joined the company's Executive Mentorship Program.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:home_office_size": {
+   "kind": "base",
+   "statement": "The home office occupies 150 square feet.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:internet_service": {
+   "kind": "base",
+   "statement": "Internet service was upgraded to 1 Gbps fiber.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:diy_centerpiece_tutorials": {
+   "kind": "base",
+   "statement": "She watched five YouTube tutorials on DIY centerpieces.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:pmp_certification": {
+   "kind": "base",
+   "statement": "She earned a Project Management Professional (PMP) certification.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:commute_duration": {
+   "kind": "base",
+   "statement": "The daily commute is expected to take about 30 minutes.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:business_books_read": {
+   "kind": "base",
+   "statement": "She has read \"The Lean Startup\" and \"Zero to One\".",
+   "constraints": []
+  },
+  "profile:Karen Rowe:accommodation_monday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Karen has an important meeting with her manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to an important meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Monday, August 17, 2026, 9:00 AM–11:00 AM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM due to a meeting with their manager.",
+     "verification_rule": "Other appointments must not overlap with August 17, 2026, from 9:00 AM to 11:00 AM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Monday, August 17, 2026, from 9:00 AM to 11:00 AM because of an important meeting with their manager.",
+     "verification_rule": "A proposed activity or appointment must not overlap with Monday, August 17, 2026, 9:00–11:00 AM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Karen Rowe:accommodation_vegetarian_diet": {
+   "kind": "accommodation",
+   "statement": "Karen follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but eats eggs and dairy products.",
+   "constraints": [
+    {
+     "constraint": "The user follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but does eat eggs and dairy products.",
+     "verification_rule": "Any proposed meal or food plan must not contain meat, poultry, fish, or seafood; eggs and dairy products are acceptable.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's meals must not contain meat, poultry, fish, or seafood; eggs and dairy products are permitted.",
+     "verification_rule": "Any proposed meal for the user must contain no meat, poultry, fish, or seafood. Eggs and dairy products do not violate this constraint.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user does not eat meat, poultry, fish, or seafood.",
+     "verification_rule": "A proposed meal or food option must not contain meat, poultry, fish, or seafood. Eggs and dairy products are permitted.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Karen Rowe:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from July 31 lists lentils, spinach, feta cheese, eggs, whole-wheat bread, and blueberries.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Friday, September 11, at 9:00 AM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine teeth cleaning appointment on Friday, September 11, at 9:00 AM.",
+     "verification_rule": "A proposed activity must not conflict with attending the dental cleaning appointment on Friday, September 11, at 9:00 AM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a routine dental cleaning scheduled for Friday, September 11, at 9:00 AM.",
+     "verification_rule": "A proposed plan must not conflict with attendance at the dental cleaning on Friday, September 11, at 9:00 AM; the appointment duration is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a routine teeth cleaning appointment at the dental office on Friday, September 11, at 9:00 AM.",
+     "verification_rule": "A proposed activity or appointment must not overlap with the dental cleaning on Friday, September 11, starting at 9:00 AM. The duration is not specified.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Karen Rowe:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with her mentee from the company’s mentorship program, the person shares tips for preparing a project status presentation.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s craft store receipt lists glass vases, ribbon, and dried flowers for a DIY table centerpiece.",
+   "constraints": []
+  },
+  "profile:Karen Rowe:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s internet provider emailed that a technician visit for a router upgrade is scheduled for September 4.",
+   "constraints": [
+    {
+     "constraint": "The user has a scheduled technician visit for a router upgrade on September 4.",
+     "verification_rule": "A proposed plan must account for the scheduled technician visit on September 4 and must not assume the user is fully free that day; any specific timing should be checked against the appointment time, which is not provided.",
+     "extracted_by": [
+      "deepseek-flash",
+      "claude-haiku-5-5"
+     ]
+    },
+    {
+     "constraint": "The user's router-upgrade technician visit is scheduled for September 4.",
+     "verification_rule": "A plan must place the scheduled router-upgrade technician visit on September 4; no specific time or availability restriction is stated.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Karen Rowe:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s search history includes “DIY table centerpiece ideas” and “how to arrange dried flowers.”",
+   "constraints": []
+  },
+  "profile:Karen Rowe:daily_record_7": {
+   "kind": "base",
+   "statement": "The person’s music streaming app shows a playlist she made titled “Weekend road trip.”",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:name": {
+   "kind": "base",
+   "statement": "Rebecca Wang is the individual's full name.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:sex": {
+   "kind": "base",
+   "statement": "Rebecca identifies as female.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:age": {
+   "kind": "base",
+   "statement": "Rebecca is 42 years old.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:address": {
+   "kind": "base",
+   "statement": "Rebecca lives at 62097 Jamie Mills Suite 169 in Port Brendamouth, Minnesota.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:marital_status": {
+   "kind": "base",
+   "statement": "Rebecca is married.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:number_of_children": {
+   "kind": "base",
+   "statement": "Rebecca has two teenage children.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:primary_residence_type": {
+   "kind": "base",
+   "statement": "Rebecca's primary residence is a single-family home.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:years_of_residence_at_current_address": {
+   "kind": "base",
+   "statement": "Rebecca has lived at her current address for twelve years.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:favorite_hobby": {
+   "kind": "base",
+   "statement": "Rebecca enjoys gardening in her free time.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:primary_language": {
+   "kind": "base",
+   "statement": "Rebecca's primary language is English.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:daily_gardening_time": {
+   "kind": "base",
+   "statement": "Rebecca dedicates two hours daily to her gardening hobby.",
+   "constraints": [
+    {
+     "constraint": "The user requires two hours every day for gardening.",
+     "verification_rule": "A proposed daily plan must include a two-hour block reserved for gardening each day.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    }
+   ]
+  },
+  "profile:Rebecca Wang:vegetable_plot_size": {
+   "kind": "base",
+   "statement": "Rebecca cultivates a 300‑square‑foot vegetable garden.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:led_lighting": {
+   "kind": "base",
+   "statement": "Rebecca upgraded to LED lighting throughout her house to improve energy efficiency.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:weekly_meal_preparation": {
+   "kind": "base",
+   "statement": "Rebecca dedicates Sundays to preparing healthy meals for the week.",
+   "constraints": [
+    {
+     "constraint": "The user reserves Sundays for preparing healthy meals for the week.",
+     "verification_rule": "A proposed plan must not schedule other commitments for the user on Sundays, or must otherwise preserve Sunday time for healthy meal preparation.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    }
+   ]
+  },
+  "profile:Rebecca Wang:pmp_certification": {
+   "kind": "base",
+   "statement": "Rebecca holds a PMP certification.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:shelter_volunteering": {
+   "kind": "base",
+   "statement": "Rebecca volunteers five hours each week at a local shelter.",
+   "constraints": [
+    {
+     "constraint": "The user volunteers five hours each week at a local shelter.",
+     "verification_rule": "A proposed weekly schedule must include at least five hours of volunteering at a local shelter.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is committed to volunteering five hours each week at a local shelter.",
+     "verification_rule": "A proposed weekly schedule must reserve five hours for volunteering at a local shelter, and no plan may occupy those hours.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Rebecca Wang:neighborhood_group_walks": {
+   "kind": "base",
+   "statement": "Rebecca organizes four group walks each month with neighbours.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:family_meal_preparation": {
+   "kind": "base",
+   "statement": "Two of Rebecca's children help with weekly meal preparation.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:accommodation_friday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Rebecca has an important meeting with her manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to an important meeting with their manager.",
+     "verification_rule": "A proposed appointment must not overlap with Friday, August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to a meeting with their manager.",
+     "verification_rule": "Other appointments must not overlap with August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM because of an important meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Friday, August 21, 2026, 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Rebecca Wang:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s garden center receipt lists tomato seedlings, a bag of compost, mulch, and a pair of pruning shears.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Wednesday, September 9, at 10:00 AM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine teeth cleaning appointment on Wednesday, September 9, at 10:00 AM and must not be scheduled for overlapping activities.",
+     "verification_rule": "A proposed activity must not overlap with the dental cleaning appointment on Wednesday, September 9, at 10:00 AM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a routine teeth-cleaning appointment on Wednesday, September 9, at 10:00 AM.",
+     "verification_rule": "A proposed plan must allow the user to attend the dental appointment at the stated time; the appointment duration is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a scheduled routine teeth cleaning at the dental office at 10:00 AM on Wednesday, September 9.",
+     "verification_rule": "A proposed activity on Wednesday, September 9 must not overlap with the 10:00 AM dental cleaning appointment, including travel time to the dental office if applicable.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Rebecca Wang:daily_record_3": {
+   "kind": "base",
+   "statement": "In a group chat with her neighbors, the person posts the route and start time for this month’s evening group walk.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from August 2 lists chicken thighs, rice, broccoli, carrots, eggs, and oranges.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s email to the local shelter’s volunteer coordinator confirms her regular weekly volunteering shift.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s online order confirmation lists garlic bulbs and tulip bulbs for fall planting.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:daily_record_7": {
+   "kind": "base",
+   "statement": "The person’s email from her children’s high school lists the date of the fall parent-teacher conferences.",
+   "constraints": []
+  },
+  "profile:Rebecca Wang:daily_record_8": {
+   "kind": "base",
+   "statement": "The person’s calendar has a reminder to clean the gutters before the end of September.",
+   "constraints": [
+    {
+     "constraint": "The user must clean the gutters before the end of September.",
+     "verification_rule": "A proposed plan must ensure the gutter cleaning is completed by the end of September (September 30).",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user must have the gutters cleaned before the end of September.",
+     "verification_rule": "A proposed gutter-cleaning date must fall on or before September 30.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:general_full_name": {
+   "kind": "base",
+   "statement": "Paula Phillips is her full name.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_sex": {
+   "kind": "base",
+   "statement": "She is female.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_address": {
+   "kind": "base",
+   "statement": "She lives at 783 Wesley Rue Suite 822, Kellyton, IA 69460.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_age": {
+   "kind": "base",
+   "statement": "She is 31 years old.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_current_employment": {
+   "kind": "base",
+   "statement": "She works as a Marketing Manager at Midwest Goods.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_marital_status": {
+   "kind": "base",
+   "statement": "She is married to Daniel Phillips.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_number_of_children": {
+   "kind": "base",
+   "statement": "She has no children.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_highest_education": {
+   "kind": "base",
+   "statement": "She holds a Bachelor's degree in Business Administration.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:general_housing_status": {
+   "kind": "base",
+   "statement": "She currently rents a two‑bedroom apartment.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:renters_insurance": {
+   "kind": "base",
+   "statement": "Her renter's insurance now includes equipment coverage.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:data_science_certificate": {
+   "kind": "base",
+   "statement": "Paula is pursuing a Data Science Certificate.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:education_institution": {
+   "kind": "base",
+   "statement": "She is studying at General Assembly.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:programming_certifications": {
+   "kind": "base",
+   "statement": "She has earned Python and SQL certifications.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:sunday_hiking": {
+   "kind": "base",
+   "statement": "Paula reserves Sunday mornings for hiking.",
+   "constraints": [
+    {
+     "constraint": "The user reserves Sunday mornings for hiking.",
+     "verification_rule": "A proposed non-hiking activity must not be scheduled during Sunday morning, as it would conflict with the user's reserved hiking time.",
+     "extracted_by": [
+      "deepseek-flash",
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user reserves Sunday mornings for hiking, so Sunday mornings are unavailable for other activities.",
+     "verification_rule": "A proposed activity must not be scheduled during Sunday morning hours.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:home_office": {
+   "kind": "base",
+   "statement": "Paula converted her spare bedroom into a home office.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:nonprofit_brand_project": {
+   "kind": "base",
+   "statement": "Her current project is developing a brand strategy for a non‑profit.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:weekly_study_time": {
+   "kind": "base",
+   "statement": "She spends ten hours per week on coursework.",
+   "constraints": [
+    {
+     "constraint": "The user spends ten hours per week on coursework.",
+     "verification_rule": "A proposed weekly schedule must reserve or account for ten hours of coursework time.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:local_tech_meetup": {
+   "kind": "base",
+   "statement": "She joined a local tech meetup to expand her friend network.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:accommodation_friday_manager_meeting": {
+   "kind": "accommodation",
+   "statement": "Paula has an important meeting with her manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time.",
+   "constraints": [
+    {
+     "constraint": "The user is unavailable on Friday, August 21, 2026, from 11:30 AM to 12:30 PM due to an important meeting with their manager.",
+     "verification_rule": "A proposed appointment or activity must not overlap with Friday, August 21, 2026, 11:30 AM–12:30 PM.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "verification_rule": "Other appointments must not overlap with August 21, 2026, from 11:30 AM to 12:30 PM.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user is unavailable for other appointments on Friday, August 21, 2026, from 11:30 AM to 12:30 PM because of an important meeting with their manager.",
+     "verification_rule": "A proposed activity or appointment must not overlap with Friday, August 21, 2026, 11:30 AM–12:30 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:accommodation_vegetarian_diet": {
+   "kind": "accommodation",
+   "statement": "Paula follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but eats eggs and dairy products.",
+   "constraints": [
+    {
+     "constraint": "The user follows a vegetarian diet and does not eat meat, poultry, fish, or seafood; eggs and dairy products are acceptable.",
+     "verification_rule": "A proposed meal or food item must not contain meat, poultry, fish, or seafood.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user's meals must not contain meat, poultry, fish, or seafood; eggs and dairy products are permitted.",
+     "verification_rule": "Any proposed meal for the user must contain no meat, poultry, fish, or seafood. Eggs and dairy products do not violate this restriction.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but does eat eggs and dairy products.",
+     "verification_rule": "A proposed meal, restaurant, or food order must not contain meat, poultry, fish, or seafood. Eggs and dairy products are permitted.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:daily_record_1": {
+   "kind": "base",
+   "statement": "The person’s grocery receipt from August 3 lists tofu, black beans, tortillas, avocados, cherry tomatoes, and oat milk.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:daily_record_2": {
+   "kind": "base",
+   "statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Tuesday, September 15, at 5:30 PM.",
+   "constraints": [
+    {
+     "constraint": "The user has a routine dental cleaning appointment scheduled on Tuesday, September 15, at 5:30 PM.",
+     "verification_rule": "A proposed plan must not require the user to be elsewhere at Tuesday, September 15, 5:30 PM, or must account for this appointment.",
+     "extracted_by": [
+      "deepseek-flash"
+     ]
+    },
+    {
+     "constraint": "The user has a routine dental cleaning scheduled for Tuesday, September 15, at 5:30 PM.",
+     "verification_rule": "A proposed activity must not conflict with the dental cleaning scheduled for September 15 at 5:30 PM; the appointment duration is unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    },
+    {
+     "constraint": "The user has a routine teeth cleaning appointment at the dental office on Tuesday, September 15, at 5:30 PM.",
+     "verification_rule": "A proposed activity must not overlap with the dental appointment on Tuesday, September 15, starting at 5:30 PM.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:daily_record_3": {
+   "kind": "base",
+   "statement": "In a chat with a classmate from her data-science bootcamp, the person compares notes on a SQL assignment due next week.",
+   "constraints": [
+    {
+     "constraint": "The user's SQL assignment is due next week.",
+     "verification_rule": "Any planned submission of the SQL assignment must be on or before its deadline next week; the exact day and time are unspecified.",
+     "extracted_by": [
+      "gpt-6.1-sol"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:daily_record_4": {
+   "kind": "base",
+   "statement": "The person’s outdoor store receipt lists a hydration backpack and a pair of hiking socks.",
+   "constraints": []
+  },
+  "profile:Paula Phillips:daily_record_5": {
+   "kind": "base",
+   "statement": "The person’s calendar has a reminder for a local tech meetup on the first Thursday of September.",
+   "constraints": [
+    {
+     "constraint": "The user has a committed calendar event: a local tech meetup on the first Thursday of September.",
+     "verification_rule": "A proposed activity or appointment on the first Thursday of September must not conflict with the local tech meetup. The meetup's start and end times are not specified in the memory, so any plan on that day must be checked against the event's time.",
+     "extracted_by": [
+      "claude-haiku-5-5"
+     ]
+    }
+   ]
+  },
+  "profile:Paula Phillips:daily_record_6": {
+   "kind": "base",
+   "statement": "The person’s search history includes “beginner trail running shoes” and “small home office layout ideas.”",
+   "constraints": []
+  },
+  "profile:Paula Phillips:daily_record_7": {
+   "kind": "base",
+   "statement": "In a chat with Daniel, the person shares a trail map for their next Sunday hike.",
+   "constraints": []
+  }
+ }
+}

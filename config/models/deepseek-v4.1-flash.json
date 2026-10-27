@@ -1,0 +1,6 @@
+{
+ "provider": "deepseek",
+ "model": "deepseek-flash",
+ "reasoning_effort": "high",
+ "max_tokens": 16000
+}

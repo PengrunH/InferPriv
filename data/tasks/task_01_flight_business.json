@@ -1,0 +1,7 @@
+{
+  "task_id": "EXPLORETRAVEL-001",
+  "category": "explore_travel",
+  "scenario_date": "2026-08-10",
+  "scenario": "Business Trip — flight confirmation",
+  "email_content": "Hi, For the Chicago conference the week of August 21st, our travel coordinator will book your flights once I hear back from you. The plan is to fly out Monday morning and fly back Friday. Could you reply to confirm: which flight time work for you, Any travel preferences or special accommodations I should flag (e.g., seat preference, assistance needs) Thanks, Coordinator."
+}

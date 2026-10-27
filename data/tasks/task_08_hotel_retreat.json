@@ -1,0 +1,7 @@
+{
+  "task_id": "EXPLOREHOTEL-003",
+  "category": "explore_hotel",
+  "scenario_date": "2026-08-10",
+  "scenario": "Company offsite — room assignment",
+  "email_content": "Hi all,\n\nHere are the room details for the Lake Geneva offsite. Check-in opens Monday, Aug 17 at 9:00 AM, and check-out is Friday, Aug 21 by 11:00 AM. A welcome session starts at 10:00 AM on Monday in the main lodge.\n\nRooms are double occupancy by default and company-paid. A private room upgrade is available for $180 out of pocket for the week.\n\nPlease reply with:\n1. Double or private room\n2. Roommate preference, if any\n3. Any room needs or arrival/departure timing I should know about\n\nThanks,\nCoordinator"
+}

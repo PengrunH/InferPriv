@@ -1,0 +1,1731 @@
+[
+ {
+  "bio": {
+   "name": "Douglas Perry",
+   "sex": "M",
+   "address": "503 Ward Underpass\nKaufmanberg, ME 03609",
+   "age": 42
+  },
+  "information_attributes": {
+   "name": {
+    "value": "Douglas Perry",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "My name is Douglas Perry."
+   },
+   "sex": {
+    "value": "M",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "I am male."
+   },
+   "address": {
+    "value": "503 Ward Underpass\nKaufmanberg, ME 03609",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "I live at 503 Ward Underpass, Kaufmanberg, ME 03609."
+   },
+   "age": {
+    "value": 42,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "I am 42 years old."
+   },
+   "marital_status": {
+    "value": "Married",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "I am married."
+   },
+   "current_employer": {
+    "value": "Northland Manufacturing Inc.",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "I work for Northland Manufacturing Inc."
+   },
+   "job_title": {
+    "value": "Production Supervisor",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "My job title is Production Supervisor."
+   },
+   "housing_status": {
+    "value": "Homeowner",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "I own my home."
+   },
+   "education_level": {
+    "value": "Bachelor of Science in Mechanical Engineering",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "I hold a Bachelor of Science in Mechanical Engineering."
+   },
+   "morning_routine_time": {
+    "value": "6:30 AM",
+    "information_domain": "schedule",
+    "event": "daily routine",
+    "memory_statement": "My daily morning routine starts at 6:30 AM."
+   },
+   "garage_workshop": {
+    "value": "Garage cleared for a new workshop",
+    "information_domain": "housing",
+    "event": "home organization",
+    "memory_statement": "I cleared clutter in the garage to create a new workshop space."
+   },
+   "storage_solution": {
+    "value": "Purchased a modular shelving unit",
+    "information_domain": "housing",
+    "event": "home organization",
+    "memory_statement": "I bought a modular shelving unit for better storage."
+   },
+   "vegetable_garden": {
+    "value": "Vegetable garden in backyard",
+    "information_domain": "housing",
+    "event": "gardening",
+    "memory_statement": "I started a vegetable garden in my backyard as a new hobby."
+   },
+   "work_project": {
+    "value": "Lean Manufacturing Initiative",
+    "information_domain": "employment",
+    "event": "work project",
+    "memory_statement": "I was assigned to lead the Lean Manufacturing Initiative project."
+   },
+   "work_productivity_score": {
+    "value": 92,
+    "information_domain": "employment",
+    "event": "sobriety",
+    "memory_statement": "My work productivity score rose to 92 out of 100."
+   },
+   "weekly_friend_checkin": {
+    "value": "Jane Thompson",
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "My supportive friend Jane Thompson checks in with me weekly."
+   },
+   "promotion_consideration": {
+    "value": "Yes, for senior supervisor",
+    "information_domain": "employment",
+    "event": "career development",
+    "memory_statement": "My manager has considered me for a promotion to senior supervisor."
+   },
+   "remote_work_days": {
+    "value": "Remote two days per week",
+    "information_domain": "employment",
+    "event": "work arrangement",
+    "memory_statement": "My employer granted a flexible work arrangement allowing me to work remotely two days per week."
+   },
+   "accommodation_monday_manager_meeting": {
+    "value": "Manager meeting Monday, August 17, 2026, 9:00–11:00 AM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Douglas has an important meeting with his manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from July 30 lists rotisserie chicken, pasta, tomatoes, bell peppers, apples, and paper towels."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Tuesday, September 8, at 4:30 PM."
+   },
+   "daily_record_3": {
+    "value": "chat with a friend",
+    "information_domain": "daily_life",
+    "event": "chat with a friend",
+    "memory_statement": "In a chat with his friend Jane Thompson, the person shares photos of the shelving he installed in his new garage workshop."
+   },
+   "daily_record_4": {
+    "value": "online order",
+    "information_domain": "daily_life",
+    "event": "online order",
+    "memory_statement": "The person’s online order confirmation shows a set of garden hose fittings and a pack of tomato stakes shipping on August 6."
+   },
+   "daily_record_5": {
+    "value": "calendar reminder",
+    "information_domain": "daily_life",
+    "event": "calendar reminder",
+    "memory_statement": "The person’s calendar has a reminder to renew his car registration by the end of September."
+   },
+   "daily_record_6": {
+    "value": "search history",
+    "information_domain": "daily_life",
+    "event": "search history",
+    "memory_statement": "The person’s search history includes “how to sharpen a wood chisel” and “best workbench height.”"
+   },
+   "daily_record_7": {
+    "value": "chat with a neighbor",
+    "information_domain": "daily_life",
+    "event": "chat with a neighbor",
+    "memory_statement": "In a text exchange with his neighbor, the person agrees to lend a ladder for cleaning the gutters."
+   },
+   "daily_record_8": {
+    "value": "photo library",
+    "information_domain": "daily_life",
+    "event": "photo library",
+    "memory_statement": "The person’s photo library includes pictures of the first ripe tomatoes from his backyard vegetable garden."
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Troy Salazar",
+   "sex": "M",
+   "address": "02516 Walker Grove Apt. 200\nAlvarezmouth, AR 88611",
+   "age": 66
+  },
+  "information_attributes": {
+   "general_name": {
+    "value": "Troy Salazar",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "The user's full name is Troy Salazar."
+   },
+   "general_sex": {
+    "value": "M",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Troy Salazar identifies as male."
+   },
+   "general_address": {
+    "value": "02516 Walker Grove Apt. 200, Alvarezmouth, AR 88611",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "His mailing address is 02516 Walker Grove Apt. 200, Alvarezmouth, AR 88611."
+   },
+   "general_age": {
+    "value": 66,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Troy is currently 66 years old."
+   },
+   "general_marital_status": {
+    "value": "Married",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "He is married."
+   },
+   "general_retirement_status": {
+    "value": "Personal trainer at a local fitness center",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Troy works as a personal trainer at a local fitness center."
+   },
+   "evening_meal_preparation": {
+    "value": "45 minutes",
+    "information_domain": "schedule",
+    "event": "daily routine",
+    "memory_statement": "He spends about 45 minutes each evening preparing his meals."
+   },
+   "sunday_dinner_with_friends": {
+    "value": "Weekly Sunday dinner",
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "He meets his friends weekly on Sundays for dinner."
+   },
+   "home_exercise_equipment": {
+    "value": "Adjustable dumbbells and resistance bands",
+    "information_domain": "housing",
+    "event": "home equipment",
+    "memory_statement": "He purchased adjustable dumbbells and resistance bands for a home gym."
+   },
+   "nearby_park": {
+    "value": "0.6 miles to nearest park",
+    "information_domain": "housing",
+    "event": "neighborhood",
+    "memory_statement": "His home is 0.6 miles from the nearest park, making walks convenient."
+   },
+   "balcony_bike_rack": {
+    "value": "Secure bike rack installed on balcony",
+    "information_domain": "housing",
+    "event": "home equipment",
+    "memory_statement": "He installed a secure bike rack on his balcony for cycling."
+   },
+   "gym_frequency": {
+    "value": "4 sessions per week",
+    "information_domain": "schedule",
+    "event": "weekly routine",
+    "memory_statement": "He attends the gym four times a week."
+   },
+   "sleep_goal": {
+    "value": "7.5 hours",
+    "information_domain": "schedule",
+    "event": "daily routine",
+    "memory_statement": "He aims for 7.5 hours of sleep each night."
+   },
+   "nutrition_certificate": {
+    "value": "Certificate in Applied Nutrition (online)",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "He completed an online Certificate in Applied Nutrition."
+   },
+   "trainer_workshop": {
+    "value": "Basic Personal Trainer Workshop",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "He attended a Basic Personal Trainer Workshop."
+   },
+   "smart_door_lock": {
+    "value": "Installed smart door lock on 2024‑02‑22",
+    "information_domain": "housing",
+    "event": "home improvement",
+    "memory_statement": "He installed a smart door lock on February 22, 2024, for added security."
+   },
+   "kitchen_organizer": {
+    "value": "Yes",
+    "information_domain": "housing",
+    "event": "home organization",
+    "memory_statement": "He installed a kitchen organizer to better manage healthy foods."
+   },
+   "conflict_resolution_coursework": {
+    "value": "12 hours",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "He completed 12 hours of conflict‑resolution coursework."
+   },
+   "accommodation_friday_manager_meeting": {
+    "value": "Manager meeting Friday, August 21, 2026, 11:30 AM–12:30 PM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Troy has an important meeting with his manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time."
+   },
+   "accommodation_no_beef_lamb_diet": {
+    "value": "No beef or lamb.",
+    "information_domain": "dietary",
+    "event": "established accommodation",
+    "memory_statement": "Troy does not eat beef or lamb."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from August 2 lists chicken breasts, sweet potatoes, broccoli, eggs, oats, and bananas."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Monday, September 14, at 8:00 AM."
+   },
+   "daily_record_3": {
+    "value": "client chat",
+    "information_domain": "daily_life",
+    "event": "client chat",
+    "memory_statement": "In a chat with a client at the fitness center, the person reschedules a training session to the following week."
+   },
+   "daily_record_4": {
+    "value": "bike-shop purchase",
+    "information_domain": "daily_life",
+    "event": "bike-shop purchase",
+    "memory_statement": "The person’s bike shop receipt lists a new chain and a tune-up for his road bike."
+   },
+   "daily_record_5": {
+    "value": "calendar entry",
+    "information_domain": "daily_life",
+    "event": "calendar entry",
+    "memory_statement": "The person’s calendar shows his usual Sunday dinner with friends at a neighborhood restaurant."
+   },
+   "daily_record_6": {
+    "value": "cycling club calendar",
+    "information_domain": "daily_life",
+    "event": "cycling club calendar",
+    "memory_statement": "The person’s calendar shows a group ride with his local cycling club on Sunday, September 13, at 7:00 AM."
+   },
+   "daily_record_7": {
+    "value": "search history",
+    "information_domain": "daily_life",
+    "event": "search history",
+    "memory_statement": "The person’s search history includes “road bike tire pressure” and “scenic cycling routes nearby.”"
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Sharon Burgess",
+   "sex": "F",
+   "address": "7022 Elizabeth Locks\nLake Kathryn, SC 73682",
+   "age": 46
+  },
+  "information_attributes": {
+   "name": {
+    "value": "Sharon Burgess",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon Burgess is the full name of the user."
+   },
+   "sex": {
+    "value": "F",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon identifies as female."
+   },
+   "address": {
+    "value": "7022 Elizabeth Locks\nLake Kathryn, SC 73682",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon lives at 7022 Elizabeth Locks, Lake Kathryn, South Carolina 73682."
+   },
+   "age": {
+    "value": 46,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon is 46 years old."
+   },
+   "profession": {
+    "value": "Registered Nurse",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon works as a registered nurse."
+   },
+   "number_of_children": {
+    "value": 2,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon has two children."
+   },
+   "children_details": {
+    "value": [
+     {
+      "name": "Emily",
+      "age": 12
+     },
+     {
+      "name": "Jacob",
+      "age": 9
+     }
+    ],
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon's children are Emily, 12, and Jacob, 9."
+   },
+   "current_housing_status": {
+    "value": "Rented townhouse in Lake Kathryn",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon currently rents a townhouse in Lake Kathryn."
+   },
+   "primary_employer": {
+    "value": "Cedar Valley Hospital",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Sharon is employed by Cedar Valley Hospital."
+   },
+   "evening_shift": {
+    "value": "Switched to evening shift starting September 2023",
+    "information_domain": "employment",
+    "event": "work schedule",
+    "memory_statement": "Sharon changed to the evening shift at Cedar Valley Hospital beginning September 2023."
+   },
+   "children_gift_requests": {
+    "value": "Excited and asked for a new bike",
+    "information_domain": "relationships",
+    "event": "family life",
+    "memory_statement": "Emily requested a new bike, and Jacob asked for a video‑game console."
+   },
+   "weekend_childcare": {
+    "value": "Grandparents provide weekend childcare, ongoing",
+    "information_domain": "relationships",
+    "event": "family routine",
+    "memory_statement": "The children's grandparents assist with weekend childcare."
+   },
+   "wound_care_certification": {
+    "value": "Completed a certification in wound care, July 2024",
+    "information_domain": "employment",
+    "event": "professional development",
+    "memory_statement": "She completed a wound‑care certification in July 2024."
+   },
+   "patient_safety_workshop": {
+    "value": "Attended a workshop on patient safety, November 2024",
+    "information_domain": "education",
+    "event": "professional development",
+    "memory_statement": "She attended a patient safety workshop in November 2024."
+   },
+   "documentation_training": {
+    "value": "Completed an online module on documentation standards, December 2024",
+    "information_domain": "education",
+    "event": "professional development",
+    "memory_statement": "She completed an online module on documentation standards in December 2024."
+   },
+   "nursing_award": {
+    "value": "Received ‘Nurse of the Year’ award, December 2023",
+    "information_domain": "employment",
+    "event": "professional recognition",
+    "memory_statement": "Sharon was honored with the ‘Nurse of the Year’ award in December 2023."
+   },
+   "child_development_course": {
+    "value": "Completed an online course on child development, May 2024",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "She completed an online child development course in May 2024."
+   },
+   "nursing_mentorship": {
+    "value": "Monthly mentorship meetings with senior RN, began October 2024",
+    "information_domain": "relationships",
+    "event": "professional development",
+    "memory_statement": "She began monthly mentorship meetings with a senior RN in October 2024."
+   },
+   "accommodation_friday_manager_meeting": {
+    "value": "Manager meeting Friday, August 21, 2026, 11:30 AM–12:30 PM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Sharon has an important meeting with her manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time."
+   },
+   "accommodation_no_beef_lamb_diet": {
+    "value": "No beef or lamb.",
+    "information_domain": "dietary",
+    "event": "established accommodation",
+    "memory_statement": "Sharon does not eat beef or lamb."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from August 1 lists chicken breasts, pasta, tomato sauce, cucumbers, bananas, and juice boxes."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Thursday, September 3, at 11:00 AM."
+   },
+   "daily_record_3": {
+    "value": "family chat",
+    "information_domain": "daily_life",
+    "event": "family chat",
+    "memory_statement": "In a chat with her parents, the person confirms they will pick up Emily and Jacob on Saturday morning."
+   },
+   "daily_record_4": {
+    "value": "online order",
+    "information_domain": "daily_life",
+    "event": "online order",
+    "memory_statement": "The person’s online order confirmation shows a bike helmet for Emily and a game controller for Jacob."
+   },
+   "daily_record_5": {
+    "value": "school email",
+    "information_domain": "daily_life",
+    "event": "school email",
+    "memory_statement": "The person’s email from the school district lists the back-to-school supply list and the first day of classes."
+   },
+   "daily_record_6": {
+    "value": "search history",
+    "information_domain": "daily_life",
+    "event": "search history",
+    "memory_statement": "The person’s search history includes “kids bike size chart” and “easy science fair project ideas.”"
+   },
+   "daily_record_7": {
+    "value": "library account",
+    "information_domain": "daily_life",
+    "event": "library account",
+    "memory_statement": "The person’s library account shows two children’s books checked out for Jacob, due back on August 31."
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Jeffery Day",
+   "sex": "M",
+   "address": "11853 Little Fords\nNorth Geraldland, DE 59776",
+   "age": 56
+  },
+  "information_attributes": {
+   "name": {
+    "value": "Jeffery Day",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "The user's name is Jeffery Day."
+   },
+   "age": {
+    "value": 56,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery is 56 years old."
+   },
+   "sex": {
+    "value": "M",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery's sex is male."
+   },
+   "address": {
+    "value": "11853 Little Fords, North Geraldland, DE 59776",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery lives at 11853 Little Fords, North Geraldland, DE 59776."
+   },
+   "marital_status": {
+    "value": "Married",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery is married."
+   },
+   "spouse_name": {
+    "value": "Linda Day",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery's spouse is named Linda Day."
+   },
+   "occupation": {
+    "value": "Senior Project Manager at a construction firm",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery works as a senior project manager at a construction firm."
+   },
+   "home_owned": {
+    "value": true,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery owns his home."
+   },
+   "number_of_children": {
+    "value": 2,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery has two children."
+   },
+   "education_level": {
+    "value": "Bachelor's degree in Civil Engineering",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Jeffery holds a bachelor's degree in civil engineering."
+   },
+   "birthday_party_decorations": {
+    "value": "Coordinated decorations",
+    "information_domain": "relationships",
+    "event": "birthday celebration",
+    "memory_statement": "Linda coordinated the decorations for Jeffery's surprise party."
+   },
+   "birthday_party_balloons": {
+    "value": "Helped set up balloons",
+    "information_domain": "relationships",
+    "event": "birthday celebration",
+    "memory_statement": "Jeffery's children helped set up balloons for the surprise event."
+   },
+   "birthday_party_venue": {
+    "value": "Backyard of the family home",
+    "information_domain": "housing",
+    "event": "birthday celebration",
+    "memory_statement": "The surprise party was held in the backyard of Jeffery's family home."
+   },
+   "birthday_party_speaker": {
+    "value": "Local history",
+    "information_domain": "education",
+    "event": "birthday celebration",
+    "memory_statement": "A guest speaker at the surprise event presented on local history."
+   },
+   "birthday_party_friends": {
+    "value": 8,
+    "information_domain": "relationships",
+    "event": "birthday celebration",
+    "memory_statement": "Eight close friends were invited to Jeffery's surprise party."
+   },
+   "birthday_party_family_attendance": {
+    "value": 12,
+    "information_domain": "education",
+    "event": "birthday celebration",
+    "memory_statement": "Twelve family members attended the surprise event."
+   },
+   "outdoor_lighting": {
+    "value": "Installed new outdoor lighting",
+    "information_domain": "housing",
+    "event": "birthday celebration",
+    "memory_statement": "The event prompted the installation of new outdoor lighting at Jeffery's home."
+   },
+   "birthday_party_cleanup": {
+    "value": 2,
+    "information_domain": "housing",
+    "event": "birthday celebration",
+    "memory_statement": "Cleaning up after the surprise event took about two hours."
+   },
+   "accommodation_friday_manager_meeting": {
+    "value": "Manager meeting Friday, August 21, 2026, 11:30 AM–12:30 PM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Jeffery has an important meeting with his manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from August 2 lists ground turkey, tortillas, shredded cheese, lettuce, salsa, and a watermelon."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Thursday, September 10, at 8:00 AM."
+   },
+   "daily_record_3": {
+    "value": "family group chat",
+    "information_domain": "daily_life",
+    "event": "family group chat",
+    "memory_statement": "In a group chat with his family, the person discusses ideas for decorating the backyard for an upcoming birthday party."
+   },
+   "daily_record_4": {
+    "value": "hardware purchase",
+    "information_domain": "daily_life",
+    "event": "hardware purchase",
+    "memory_statement": "The person’s hardware store receipt lists outdoor string lights, extension cords, and zip ties."
+   },
+   "daily_record_5": {
+    "value": "work email",
+    "information_domain": "daily_life",
+    "event": "work email",
+    "memory_statement": "The person’s email to a colleague asks for the updated site-inspection checklist before the next project meeting."
+   },
+   "daily_record_6": {
+    "value": "photo album",
+    "information_domain": "daily_life",
+    "event": "photo album",
+    "memory_statement": "The person’s phone has a photo album titled “Backyard party” with pictures of the string lights and balloons."
+   },
+   "daily_record_7": {
+    "value": "text from spouse",
+    "information_domain": "daily_life",
+    "event": "text from spouse",
+    "memory_statement": "In a text message, Linda asks the person to pick up a new lawn mower blade on his way home."
+   },
+   "daily_record_8": {
+    "value": "car maintenance reminder",
+    "information_domain": "daily_life",
+    "event": "car maintenance reminder",
+    "memory_statement": "The person’s calendar has a reminder for his car’s oil change on Wednesday, September 9, at 5:30 PM."
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Ashley Garcia",
+   "sex": "F",
+   "address": "48163 Reed Stream\nNorth Jessicaberg, FL 87186",
+   "age": 36
+  },
+  "information_attributes": {
+   "name": {
+    "value": "Ashley Garcia",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "The user's name is Ashley Garcia."
+   },
+   "sex": {
+    "value": "F",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Ashley Garcia identifies as female."
+   },
+   "address": {
+    "value": "48163 Reed Stream\nNorth Jessicaberg, FL 87186",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Ashley lives at 48163 Reed Stream, North Jessicaberg, FL 87186."
+   },
+   "age": {
+    "value": 36,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Ashley Garcia is 36 years old."
+   },
+   "date_of_birth": {
+    "value": "1989-09-18",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "She was born on September 18, 1989."
+   },
+   "marital_status": {
+    "value": "Married",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Ashley is married."
+   },
+   "number_of_children": {
+    "value": 2,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "She has two children."
+   },
+   "current_employer": {
+    "value": "Tech Innovations Inc.",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "She works for Tech Innovations Inc."
+   },
+   "retirement_goal_age": {
+    "value": 55,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Ashley aims to retire early at age 55."
+   },
+   "financial_planning_course": {
+    "value": "Certified Financial Planner Basics",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "She completed the course titled Certified Financial Planner Basics."
+   },
+   "course_platform": {
+    "value": "Coursera",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "The course was taken on the Coursera platform."
+   },
+   "retirement_discussion_group": {
+    "value": "Monthly early-retirement discussion group",
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "She participates in a monthly early-retirement planning discussion group with friends."
+   },
+   "downsizing_preference": {
+    "value": "Smaller home near Lakeview",
+    "information_domain": "housing",
+    "event": "housing preference",
+    "memory_statement": "She hopes to eventually downsize to a smaller home near Lakeview."
+   },
+   "children_advice": {
+    "value": "Two children, occasionally asked for input",
+    "information_domain": "relationships",
+    "event": "family life",
+    "memory_statement": "She occasionally asks her two children for their input on family decisions."
+   },
+   "financial_course_study_hours": {
+    "value": "35",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "She spent 35 hours on the financial planning education."
+   },
+   "home_security_system": {
+    "value": "Operational",
+    "information_domain": "housing",
+    "event": "home equipment",
+    "memory_statement": "The security system on her home is operational."
+   },
+   "friend_visit_frequency": {
+    "value": "3",
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "She receives three friend visits per week."
+   },
+   "retirement_planning_spouse_support": {
+    "value": "High",
+    "information_domain": "relationships",
+    "event": "family life",
+    "memory_statement": "Her spouse provides high support for her retirement plans."
+   },
+   "accommodation_monday_manager_meeting": {
+    "value": "Manager meeting Monday, August 17, 2026, 9:00–11:00 AM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Ashley has an important meeting with her manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from August 1 lists salmon fillets, brown rice, spinach, strawberries, yogurt, and granola."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Monday, September 14, at 3:00 PM."
+   },
+   "daily_record_3": {
+    "value": "chat with a friend",
+    "information_domain": "daily_life",
+    "event": "chat with a friend",
+    "memory_statement": "In a chat with a friend, the person makes plans to meet for a walk at the lakeside park on Sunday afternoon."
+   },
+   "daily_record_4": {
+    "value": "service email",
+    "information_domain": "daily_life",
+    "event": "service email",
+    "memory_statement": "The person’s home security company emailed that her system’s annual maintenance check is scheduled for September 2."
+   },
+   "daily_record_5": {
+    "value": "online order",
+    "information_domain": "daily_life",
+    "event": "online order",
+    "memory_statement": "The person’s online order confirmation shows two school backpacks and a pack of notebooks for her children."
+   },
+   "daily_record_6": {
+    "value": "school club email",
+    "information_domain": "daily_life",
+    "event": "school club email",
+    "memory_statement": "The person’s school district email confirms that one of her children is signed up for the after-school robotics club."
+   },
+   "daily_record_7": {
+    "value": "children activity calendar",
+    "information_domain": "daily_life",
+    "event": "children activity calendar",
+    "memory_statement": "The person’s calendar shows her children’s soccer practice on Wednesdays at 5:00 PM starting in September."
+   },
+   "daily_record_8": {
+    "value": "online order",
+    "information_domain": "daily_life",
+    "event": "online order",
+    "memory_statement": "The person’s online order confirmation shows a new doormat and a set of picture frames."
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Shawn Franklin",
+   "sex": "M",
+   "address": "8382 Adam Fort\nLake Kimberlyburgh, WV 48656",
+   "age": 63
+  },
+  "information_attributes": {
+   "general_full_name": {
+    "value": "Shawn Franklin",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Shawn Franklin is the full name of the user."
+   },
+   "general_age": {
+    "value": 63,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Shawn is 63 years old."
+   },
+   "general_sex": {
+    "value": "M",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Shawn identifies as male."
+   },
+   "general_address": {
+    "value": "8382 Adam Fort, Lake Kimberlyburgh, WV 48656",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Shawn lives at 8382 Adam Fort, Lake Kimberlyburgh, West Virginia 48656."
+   },
+   "general_occupation": {
+    "value": "Senior electrician at a regional utility company",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Shawn works as a senior electrician at a regional utility company."
+   },
+   "general_residence_type": {
+    "value": "Owned single-family home",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Shawn owns a single-family home."
+   },
+   "general_education_level": {
+    "value": "Associate degree in Electrical Technology",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Shawn holds an associate degree in Electrical Technology."
+   },
+   "morning_jog": {
+    "value": "Daily jog at 6:00 AM",
+    "information_domain": "schedule",
+    "event": "daily routine",
+    "memory_statement": "Shawn goes for a jog each morning at 6:00 AM."
+   },
+   "nearby_community_center": {
+    "value": "5‑minute walk to local community center",
+    "information_domain": "housing",
+    "event": "neighborhood",
+    "memory_statement": "Shawn’s home is a five‑minute walk from the local community center."
+   },
+   "driveway_parking": {
+    "value": "Installed a dedicated parking space for his car",
+    "information_domain": "housing",
+    "event": "home improvement",
+    "memory_statement": "Shawn had a dedicated parking space added to his driveway."
+   },
+   "indoor_no_smoking_rule": {
+    "value": "No smoking allowed indoors",
+    "information_domain": "housing",
+    "event": "household rule",
+    "memory_statement": "Shawn enforces a strict no‑smoking policy inside his house."
+   },
+   "nutrition_class_certificate": {
+    "value": "Received March 2024",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "Shawn earned a certificate from a nutrition class in March 2024."
+   },
+   "parenting_classes": {
+    "value": "Two parenting classes completed",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "Shawn has completed two parenting classes."
+   },
+   "financial_planning_workshop": {
+    "value": "Attended a financial planning workshop in August 2024",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "Shawn attended a financial planning workshop in August 2024."
+   },
+   "emotional_intelligence_seminar": {
+    "value": "Participated in an EI seminar in September 2024",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "Shawn participated in an emotional intelligence seminar in September 2024."
+   },
+   "longtime_friend": {
+    "value": "Michael (long‑time friend)",
+    "information_domain": "relationships",
+    "event": "social relationships",
+    "memory_statement": "Shawn confides primarily in his long‑time friend Michael."
+   },
+   "friends_gatherings": {
+    "value": "High, friends host gatherings",
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "Shawn’s friends are highly supportive and regularly host gatherings for him."
+   },
+   "home_coownership": {
+    "value": "Co‑owned with spouse",
+    "information_domain": "housing",
+    "event": "housing",
+    "memory_statement": "Shawn’s current residence is co‑owned with his spouse."
+   },
+   "accommodation_monday_manager_meeting": {
+    "value": "Manager meeting Monday, August 17, 2026, 9:00–11:00 AM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Shawn has an important meeting with his manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time."
+   },
+   "accommodation_no_beef_lamb_diet": {
+    "value": "No beef or lamb.",
+    "information_domain": "dietary",
+    "event": "established accommodation",
+    "memory_statement": "Shawn does not eat beef or lamb."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from July 30 lists chicken thighs, rice, green beans, corn, apples, and bread."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Tuesday, September 8, at 7:00 AM."
+   },
+   "daily_record_3": {
+    "value": "chat with a friend",
+    "information_domain": "daily_life",
+    "event": "chat with a friend",
+    "memory_statement": "In a chat with his longtime friend Michael, the person makes plans to watch a ball game on Saturday."
+   },
+   "daily_record_4": {
+    "value": "community email",
+    "information_domain": "daily_life",
+    "event": "community email",
+    "memory_statement": "The person’s community center email lists the fall schedule for its woodworking workshop."
+   },
+   "daily_record_5": {
+    "value": "hardware purchase",
+    "information_domain": "daily_life",
+    "event": "hardware purchase",
+    "memory_statement": "The person’s hardware store receipt lists wire connectors, a voltage tester, and electrical tape."
+   },
+   "daily_record_6": {
+    "value": "search history",
+    "information_domain": "daily_life",
+    "event": "search history",
+    "memory_statement": "The person’s search history includes “how to refinish a wooden deck” and “ball game start time tonight.”"
+   },
+   "daily_record_7": {
+    "value": "chat with a neighbor",
+    "information_domain": "daily_life",
+    "event": "chat with a neighbor",
+    "memory_statement": "In a chat with a neighbor, the person offers to help install a new porch light."
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Andrew Cross",
+   "sex": "M",
+   "address": "567 Antonio Forges\nNew Antoniostad, WV 71119",
+   "age": 57
+  },
+  "information_attributes": {
+   "general_name": {
+    "value": "Andrew Cross",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew Cross is the individual's full name."
+   },
+   "general_sex": {
+    "value": "M",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew identifies as male."
+   },
+   "general_address": {
+    "value": "567 Antonio Forges\nNew Antoniostad, WV 71119",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew lives at 567 Antonio Forges, New Antoniostad, WV 71119."
+   },
+   "general_age": {
+    "value": 57,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew is 57 years old."
+   },
+   "general_marital_status": {
+    "value": "married",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew is married."
+   },
+   "general_number_of_children": {
+    "value": 2,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew and his spouse have two children."
+   },
+   "general_occupation": {
+    "value": "Senior Accountant",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew works as a senior accountant."
+   },
+   "general_employment_status": {
+    "value": "full_time",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew is employed full‑time."
+   },
+   "general_education_level": {
+    "value": "Bachelor's degree in Finance",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew holds a bachelor's degree in finance."
+   },
+   "general_home_ownership": {
+    "value": "owner",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Andrew owns his home."
+   },
+   "employer_name": {
+    "value": "Cross & Associates",
+    "information_domain": "employment",
+    "event": "employment",
+    "memory_statement": "He works for Cross & Associates."
+   },
+   "weekly_work_hours": {
+    "value": 45,
+    "information_domain": "employment",
+    "event": "work schedule",
+    "memory_statement": "Andrew works 45 hours per week."
+   },
+   "moving_plans": {
+    "value": "none",
+    "information_domain": "housing",
+    "event": "housing plans",
+    "memory_statement": "He has no plans to move in the near future."
+   },
+   "performance_review": {
+    "value": 8,
+    "information_domain": "employment",
+    "event": "employment",
+    "memory_statement": "His latest performance review rating was 8 out of 10."
+   },
+   "financial_literacy_course": {
+    "value": true,
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "He completed a financial literacy course."
+   },
+   "continuing_education_credits": {
+    "value": 2,
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "He earned two continuing‑education credits."
+   },
+   "recent_social_event": {
+    "value": 1,
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "He attended one social event in the last month."
+   },
+   "home_cleanliness_rating": {
+    "value": 9,
+    "information_domain": "housing",
+    "event": "household",
+    "memory_statement": "He rates his home cleanliness as 9 out of 10."
+   },
+   "accommodation_monday_manager_meeting": {
+    "value": "Manager meeting Monday, August 17, 2026, 9:00–11:00 AM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Andrew has an important meeting with his manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time."
+   },
+   "accommodation_vegetarian_diet": {
+    "value": "Vegetarian; no meat, poultry, fish, or seafood; eggs and dairy allowed.",
+    "information_domain": "dietary",
+    "event": "established accommodation",
+    "memory_statement": "Andrew follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but eats eggs and dairy products."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from August 4 lists chickpeas, pasta, marinara sauce, zucchini, mushrooms, and parmesan."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Wednesday, September 16, at 7:30 AM."
+   },
+   "daily_record_3": {
+    "value": "work chat",
+    "information_domain": "daily_life",
+    "event": "work chat",
+    "memory_statement": "In a chat with a coworker at Cross & Associates, the person coordinates who will cover client calls during the end-of-quarter close."
+   },
+   "daily_record_4": {
+    "value": "home services appointment",
+    "information_domain": "daily_life",
+    "event": "home services appointment",
+    "memory_statement": "The person’s email from a home services company confirms a gutter cleaning appointment on Tuesday, September 1."
+   },
+   "daily_record_5": {
+    "value": "library account",
+    "information_domain": "daily_life",
+    "event": "library account",
+    "memory_statement": "The person’s library account shows two books on spreadsheet modeling due back on August 28."
+   },
+   "daily_record_6": {
+    "value": "search history",
+    "information_domain": "daily_life",
+    "event": "search history",
+    "memory_statement": "The person’s search history includes “best mystery novels this year” and “how to fix a squeaky door hinge.”"
+   },
+   "daily_record_7": {
+    "value": "chat with spouse",
+    "information_domain": "daily_life",
+    "event": "chat with spouse",
+    "memory_statement": "In a chat with his spouse, the person agrees to pick up their children from practice on Wednesday, September 2."
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Karen Rowe",
+   "sex": "F",
+   "address": "52365 Maxwell Ranch Suite 543\nCampbellfurt, TN 61978",
+   "age": 39
+  },
+  "information_attributes": {
+   "name": {
+    "value": "Karen Rowe",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen Rowe is the individual's full name."
+   },
+   "sex": {
+    "value": "Female",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen Rowe identifies as female."
+   },
+   "age": {
+    "value": 39,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen Rowe is 39 years old."
+   },
+   "address": {
+    "value": "52365 Maxwell Ranch Suite 543, Campbellfurt, TN 61978",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen lives at 52365 Maxwell Ranch Suite 543 in Campbellfurt, Tennessee."
+   },
+   "marital_status": {
+    "value": "Married",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen is married."
+   },
+   "current_employment_position": {
+    "value": "Senior Manager at TechSolutions Inc.",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen currently works as a Senior Manager at TechSolutions Inc."
+   },
+   "home_ownership_status": {
+    "value": "Owns a condo",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen owns a condominium."
+   },
+   "education_level": {
+    "value": "MBA in Business Administration",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Karen holds an MBA in Business Administration."
+   },
+   "manager_relationship": {
+    "value": "Positive and supportive",
+    "information_domain": "relationships",
+    "event": "job promotion",
+    "memory_statement": "Karen's relationship with her manager is positive and supportive."
+   },
+   "leadership_course": {
+    "value": "Harvard Online Leadership Essentials",
+    "information_domain": "education",
+    "event": "professional development",
+    "memory_statement": "Karen enrolled in the Harvard Online Leadership Essentials course."
+   },
+   "current_book": {
+    "value": "\"The Innovator's Dilemma\" by Clayton Christensen",
+    "information_domain": "education",
+    "event": "reading",
+    "memory_statement": "She is reading \"The Innovator's Dilemma\" by Clayton Christensen."
+   },
+   "mentorship_program": {
+    "value": "Company's Executive Mentorship Program",
+    "information_domain": "education",
+    "event": "professional development",
+    "memory_statement": "She joined the company's Executive Mentorship Program."
+   },
+   "home_office_size": {
+    "value": "150 square feet dedicated to home office",
+    "information_domain": "housing",
+    "event": "home workspace",
+    "memory_statement": "The home office occupies 150 square feet."
+   },
+   "internet_service": {
+    "value": "Upgraded internet to 1 Gbps fiber",
+    "information_domain": "housing",
+    "event": "home workspace",
+    "memory_statement": "Internet service was upgraded to 1 Gbps fiber."
+   },
+   "diy_centerpiece_tutorials": {
+    "value": "Watched 5 YouTube tutorials on DIY centerpieces",
+    "information_domain": "education",
+    "event": "event preparation",
+    "memory_statement": "She watched five YouTube tutorials on DIY centerpieces."
+   },
+   "pmp_certification": {
+    "value": "Project Management Professional (PMP)",
+    "information_domain": "education",
+    "event": "professional qualification",
+    "memory_statement": "She earned a Project Management Professional (PMP) certification."
+   },
+   "commute_duration": {
+    "value": "30 minutes",
+    "information_domain": "schedule",
+    "event": "work routine",
+    "memory_statement": "The daily commute is expected to take about 30 minutes."
+   },
+   "business_books_read": {
+    "value": "Read \"The Lean Startup\" and \"Zero to One\"",
+    "information_domain": "education",
+    "event": "reading",
+    "memory_statement": "She has read \"The Lean Startup\" and \"Zero to One\"."
+   },
+   "accommodation_monday_manager_meeting": {
+    "value": "Manager meeting Monday, August 17, 2026, 9:00–11:00 AM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Karen has an important meeting with her manager on Monday, August 17, 2026, from 9:00 AM to 11:00 AM and is unavailable for other appointments during that time."
+   },
+   "accommodation_vegetarian_diet": {
+    "value": "Vegetarian; no meat, poultry, fish, or seafood; eggs and dairy allowed.",
+    "information_domain": "dietary",
+    "event": "established accommodation",
+    "memory_statement": "Karen follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but eats eggs and dairy products."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from July 31 lists lentils, spinach, feta cheese, eggs, whole-wheat bread, and blueberries."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Friday, September 11, at 9:00 AM."
+   },
+   "daily_record_3": {
+    "value": "mentorship chat",
+    "information_domain": "daily_life",
+    "event": "mentorship chat",
+    "memory_statement": "In a chat with her mentee from the company’s mentorship program, the person shares tips for preparing a project status presentation."
+   },
+   "daily_record_4": {
+    "value": "craft purchase",
+    "information_domain": "daily_life",
+    "event": "craft purchase",
+    "memory_statement": "The person’s craft store receipt lists glass vases, ribbon, and dried flowers for a DIY table centerpiece."
+   },
+   "daily_record_5": {
+    "value": "service email",
+    "information_domain": "daily_life",
+    "event": "service email",
+    "memory_statement": "The person’s internet provider emailed that a technician visit for a router upgrade is scheduled for September 4."
+   },
+   "daily_record_6": {
+    "value": "search history",
+    "information_domain": "daily_life",
+    "event": "search history",
+    "memory_statement": "The person’s search history includes “DIY table centerpiece ideas” and “how to arrange dried flowers.”"
+   },
+   "daily_record_7": {
+    "value": "music playlist",
+    "information_domain": "daily_life",
+    "event": "music playlist",
+    "memory_statement": "The person’s music streaming app shows a playlist she made titled “Weekend road trip.”"
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Rebecca Wang",
+   "sex": "F",
+   "address": "62097 Jamie Mills Suite 169\nPort Brendamouth, MN 45362",
+   "age": 42
+  },
+  "information_attributes": {
+   "name": {
+    "value": "Rebecca Wang",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca Wang is the individual's full name."
+   },
+   "sex": {
+    "value": "F",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca identifies as female."
+   },
+   "age": {
+    "value": 42,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca is 42 years old."
+   },
+   "address": {
+    "value": "62097 Jamie Mills Suite 169, Port Brendamouth, MN 45362",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca lives at 62097 Jamie Mills Suite 169 in Port Brendamouth, Minnesota."
+   },
+   "marital_status": {
+    "value": "Married",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca is married."
+   },
+   "number_of_children": {
+    "value": 2,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca has two teenage children."
+   },
+   "primary_residence_type": {
+    "value": "Single-family home",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca's primary residence is a single-family home."
+   },
+   "years_of_residence_at_current_address": {
+    "value": 12,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca has lived at her current address for twelve years."
+   },
+   "favorite_hobby": {
+    "value": "Gardening",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca enjoys gardening in her free time."
+   },
+   "primary_language": {
+    "value": "English",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Rebecca's primary language is English."
+   },
+   "daily_gardening_time": {
+    "value": "2 hours",
+    "information_domain": "schedule",
+    "event": "gardening",
+    "memory_statement": "Rebecca dedicates two hours daily to her gardening hobby."
+   },
+   "vegetable_plot_size": {
+    "value": "300",
+    "information_domain": "housing",
+    "event": "gardening",
+    "memory_statement": "Rebecca cultivates a 300‑square‑foot vegetable garden."
+   },
+   "led_lighting": {
+    "value": "LED lighting throughout",
+    "information_domain": "housing",
+    "event": "home improvement",
+    "memory_statement": "Rebecca upgraded to LED lighting throughout her house to improve energy efficiency."
+   },
+   "weekly_meal_preparation": {
+    "value": "Sunday",
+    "information_domain": "schedule",
+    "event": "weekly routine",
+    "memory_statement": "Rebecca dedicates Sundays to preparing healthy meals for the week."
+   },
+   "pmp_certification": {
+    "value": "Project Management Professional (PMP)",
+    "information_domain": "education",
+    "event": "professional qualification",
+    "memory_statement": "Rebecca holds a PMP certification."
+   },
+   "shelter_volunteering": {
+    "value": "5",
+    "information_domain": "schedule",
+    "event": "volunteering",
+    "memory_statement": "Rebecca volunteers five hours each week at a local shelter."
+   },
+   "neighborhood_group_walks": {
+    "value": "4",
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "Rebecca organizes four group walks each month with neighbours."
+   },
+   "family_meal_preparation": {
+    "value": "2",
+    "information_domain": "relationships",
+    "event": "family routine",
+    "memory_statement": "Two of Rebecca's children help with weekly meal preparation."
+   },
+   "accommodation_friday_manager_meeting": {
+    "value": "Manager meeting Friday, August 21, 2026, 11:30 AM–12:30 PM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Rebecca has an important meeting with her manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time."
+   },
+   "daily_record_1": {
+    "value": "garden purchase",
+    "information_domain": "daily_life",
+    "event": "garden purchase",
+    "memory_statement": "The person’s garden center receipt lists tomato seedlings, a bag of compost, mulch, and a pair of pruning shears."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Wednesday, September 9, at 10:00 AM."
+   },
+   "daily_record_3": {
+    "value": "neighborhood group chat",
+    "information_domain": "daily_life",
+    "event": "neighborhood group chat",
+    "memory_statement": "In a group chat with her neighbors, the person posts the route and start time for this month’s evening group walk."
+   },
+   "daily_record_4": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from August 2 lists chicken thighs, rice, broccoli, carrots, eggs, and oranges."
+   },
+   "daily_record_5": {
+    "value": "volunteer email",
+    "information_domain": "daily_life",
+    "event": "volunteer email",
+    "memory_statement": "The person’s email to the local shelter’s volunteer coordinator confirms her regular weekly volunteering shift."
+   },
+   "daily_record_6": {
+    "value": "seed order",
+    "information_domain": "daily_life",
+    "event": "seed order",
+    "memory_statement": "The person’s online order confirmation lists garlic bulbs and tulip bulbs for fall planting."
+   },
+   "daily_record_7": {
+    "value": "school email",
+    "information_domain": "daily_life",
+    "event": "school email",
+    "memory_statement": "The person’s email from her children’s high school lists the date of the fall parent-teacher conferences."
+   },
+   "daily_record_8": {
+    "value": "home maintenance reminder",
+    "information_domain": "daily_life",
+    "event": "home maintenance reminder",
+    "memory_statement": "The person’s calendar has a reminder to clean the gutters before the end of September."
+   }
+  }
+ },
+ {
+  "bio": {
+   "name": "Paula Phillips",
+   "sex": "F",
+   "address": "783 Wesley Rue Suite 822\nKellyton, IA 69460",
+   "age": 31
+  },
+  "information_attributes": {
+   "general_full_name": {
+    "value": "Paula Phillips",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "Paula Phillips is her full name."
+   },
+   "general_sex": {
+    "value": "Female",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "She is female."
+   },
+   "general_address": {
+    "value": "783 Wesley Rue Suite 822, Kellyton, IA 69460",
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "She lives at 783 Wesley Rue Suite 822, Kellyton, IA 69460."
+   },
+   "general_age": {
+    "value": 31,
+    "information_domain": "general",
+    "event": "general",
+    "memory_statement": "She is 31 years old."
+   },
+   "general_current_employment": {
+    "value": "Marketing Manager at Midwest Goods",
+    "information_domain": "employment",
+    "event": "general",
+    "memory_statement": "She works as a Marketing Manager at Midwest Goods."
+   },
+   "general_marital_status": {
+    "value": "Married to Daniel Phillips",
+    "information_domain": "relationships",
+    "event": "general",
+    "memory_statement": "She is married to Daniel Phillips."
+   },
+   "general_number_of_children": {
+    "value": 0,
+    "information_domain": "relationships",
+    "event": "general",
+    "memory_statement": "She has no children."
+   },
+   "general_highest_education": {
+    "value": "Bachelor's degree in Business Administration",
+    "information_domain": "education",
+    "event": "general",
+    "memory_statement": "She holds a Bachelor's degree in Business Administration."
+   },
+   "general_housing_status": {
+    "value": "Rents a two‑bedroom apartment",
+    "information_domain": "housing",
+    "event": "general",
+    "memory_statement": "She currently rents a two‑bedroom apartment."
+   },
+   "renters_insurance": {
+    "value": "Added equipment coverage",
+    "information_domain": "housing",
+    "event": "career change",
+    "memory_statement": "Her renter's insurance now includes equipment coverage."
+   },
+   "data_science_certificate": {
+    "value": "Data Science Certificate",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "Paula is pursuing a Data Science Certificate."
+   },
+   "education_institution": {
+    "value": "General Assembly",
+    "information_domain": "education",
+    "event": "continuing education",
+    "memory_statement": "She is studying at General Assembly."
+   },
+   "programming_certifications": {
+    "value": "Python and SQL certificates",
+    "information_domain": "education",
+    "event": "professional qualification",
+    "memory_statement": "She has earned Python and SQL certifications."
+   },
+   "sunday_hiking": {
+    "value": "Sunday mornings for hiking",
+    "information_domain": "schedule",
+    "event": "weekly routine",
+    "memory_statement": "Paula reserves Sunday mornings for hiking."
+   },
+   "home_office": {
+    "value": "Spare bedroom converted into office",
+    "information_domain": "housing",
+    "event": "home workspace",
+    "memory_statement": "Paula converted her spare bedroom into a home office."
+   },
+   "nonprofit_brand_project": {
+    "value": "Brand strategy for a non‑profit organization",
+    "information_domain": "employment",
+    "event": "work project",
+    "memory_statement": "Her current project is developing a brand strategy for a non‑profit."
+   },
+   "weekly_study_time": {
+    "value": 10,
+    "information_domain": "schedule",
+    "event": "continuing education",
+    "memory_statement": "She spends ten hours per week on coursework."
+   },
+   "local_tech_meetup": {
+    "value": "Joined local tech meetup group",
+    "information_domain": "relationships",
+    "event": "social routine",
+    "memory_statement": "She joined a local tech meetup to expand her friend network."
+   },
+   "accommodation_friday_manager_meeting": {
+    "value": "Manager meeting Friday, August 21, 2026, 11:30 AM–12:30 PM; unavailable during that interval.",
+    "information_domain": "schedule",
+    "event": "established accommodation",
+    "memory_statement": "Paula has an important meeting with her manager on Friday, August 21, 2026, from 11:30 AM to 12:30 PM and is unavailable for other appointments during that time."
+   },
+   "accommodation_vegetarian_diet": {
+    "value": "Vegetarian; no meat, poultry, fish, or seafood; eggs and dairy allowed.",
+    "information_domain": "dietary",
+    "event": "established accommodation",
+    "memory_statement": "Paula follows a vegetarian diet and does not eat meat, poultry, fish, or seafood, but eats eggs and dairy products."
+   },
+   "daily_record_1": {
+    "value": "grocery purchase",
+    "information_domain": "daily_life",
+    "event": "grocery purchase",
+    "memory_statement": "The person’s grocery receipt from August 3 lists tofu, black beans, tortillas, avocados, cherry tomatoes, and oat milk."
+   },
+   "daily_record_2": {
+    "value": "dental appointment",
+    "information_domain": "daily_life",
+    "event": "dental appointment",
+    "memory_statement": "The person’s dental office sent a reminder for a routine teeth cleaning on Tuesday, September 15, at 5:30 PM."
+   },
+   "daily_record_3": {
+    "value": "chat with a classmate",
+    "information_domain": "daily_life",
+    "event": "chat with a classmate",
+    "memory_statement": "In a chat with a classmate from her data-science bootcamp, the person compares notes on a SQL assignment due next week."
+   },
+   "daily_record_4": {
+    "value": "outdoor-gear purchase",
+    "information_domain": "daily_life",
+    "event": "outdoor-gear purchase",
+    "memory_statement": "The person’s outdoor store receipt lists a hydration backpack and a pair of hiking socks."
+   },
+   "daily_record_5": {
+    "value": "calendar reminder",
+    "information_domain": "daily_life",
+    "event": "calendar reminder",
+    "memory_statement": "The person’s calendar has a reminder for a local tech meetup on the first Thursday of September."
+   },
+   "daily_record_6": {
+    "value": "search history",
+    "information_domain": "daily_life",
+    "event": "search history",
+    "memory_statement": "The person’s search history includes “beginner trail running shoes” and “small home office layout ideas.”"
+   },
+   "daily_record_7": {
+    "value": "chat with spouse",
+    "information_domain": "daily_life",
+    "event": "chat with spouse",
+    "memory_statement": "In a chat with Daniel, the person shares a trail map for their next Sunday hike."
+   }
+  }
+ }
+]

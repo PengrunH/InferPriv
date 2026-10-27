@@ -1,0 +1,8 @@
+{
+  "task_id": "EXPLOREHOTEL-001",
+  "category": "explore_hotel",
+  "scenario_date": "2026-08-10",
+  "scenario": "Business Trip — hotel confirmation",
+  "email_content": "Hi, we're sending two people to the annual industry conference in Chicago the week of August 21st, and I'd like you to be one of them. It's a 4-day trip: you'd arrive Monday, attend sessions Tuesday through Thursday, and head home Friday. Our hotel coordinator will book the hotel (Monday through Thursday nights) once I hear back from you. The hotel provides complimentary breakfast each morning, along with shuttle to the venue. Standard checkout time is at 12:00 PM on Friday. Could you reply to confirm whether the dates work for you and are there any special accommodations I should flag for the hotel (e.g., accessible room, room preferences, late checkout) Thanks, Coordinator"
+}
+

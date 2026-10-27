@@ -1,0 +1,57 @@
+[
+ {
+  "statement_id": "profile:Andrew Cross:weekly_work_hours",
+  "task_file": "task_04_transportation_trip.json",
+  "need": 0,
+  "votes": {
+   "gpt-6.1-sol": 0,
+   "deepseek-flash": 1,
+   "claude-haiku-5-5": 1
+  },
+  "reason": "Split vote with a Required majority; set to Not Required by hand."
+ },
+ {
+  "statement_id": "profile:Sharon Burgess:evening_shift",
+  "task_file": "task_00_hotel_business.json",
+  "need": 0,
+  "votes": {
+   "gpt-6.1-sol": 1,
+   "deepseek-flash": 1,
+   "claude-haiku-5-5": 0
+  },
+  "reason": "Split vote with a Required majority; set to Not Required by hand."
+ },
+ {
+  "statement_id": "profile:Sharon Burgess:evening_shift",
+  "task_file": "task_02_meal_company.json",
+  "need": 0,
+  "votes": {
+   "gpt-6.1-sol": 1,
+   "deepseek-flash": 1,
+   "claude-haiku-5-5": 0
+  },
+  "reason": "Split vote with a Required majority; set to Not Required by hand."
+ },
+ {
+  "statement_id": "profile:Sharon Burgess:evening_shift",
+  "task_file": "task_03_meal_social.json",
+  "need": 0,
+  "votes": {
+   "gpt-6.1-sol": 1,
+   "deepseek-flash": 1,
+   "claude-haiku-5-5": 0
+  },
+  "reason": "Split vote with a Required majority; set to Not Required by hand."
+ },
+ {
+  "statement_id": "profile:Sharon Burgess:evening_shift",
+  "task_file": "task_04_transportation_trip.json",
+  "need": 0,
+  "votes": {
+   "gpt-6.1-sol": 0,
+   "deepseek-flash": 1,
+   "claude-haiku-5-5": 1
+  },
+  "reason": "Split vote with a Required majority; set to Not Required by hand."
+ }
+]

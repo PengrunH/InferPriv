@@ -1,0 +1,48 @@
+### Task
+
+You are given one memory statements. Your task is to identify the user's explicit hard constraints, which is defined as actionable and verifiable restrictions on daily planning, such as scheduling meetings, arranging meals, making reservations, or planning travel.
+
+### Definition
+
+An explicit user constraint is a requirement or restriction directly supported by the user's memory that limits acceptable planning decisions.
+
+A valid constraint must satisfy ALL of the following criteria:
+
+1. Explicitness: The constraint must be directly supported by the provided memory statements. Do not infer additional restrictions based on background information, demographic characteristics, medical conditions, or general world knowledge.
+2. Actionability: The constraint must impose a concrete restriction that may rule out some possible plans that someone else could make for the user.
+3. Verifiability: Whether a proposed plan satisfies the constraint must be objectively assessable, such as a specific time window.
+
+### Instructions
+
+- Derive at most one constraint from a single memory statement. 
+- Use explicit temporal or contextual updates to resolve outdated information. If conflicting statements cannot be reliably reconciled, flag the conflict rather than assuming which statement is correct.
+- Retain the relevant scope and conditions of each constraint, such as time, location, activity, or budget.
+- Distinguish hard constraints from soft preferences. Do not include preferences or habits unless they explicitly establish a binding restriction.
+- Extract only requirements the text states. Do not introduce constraints that are not supported by the provided memory.
+- Do not assess relevance to a particular task. Extract constraints that could apply to any everyday planning task.
+- Refer to the user only as "the user" (they/them). Do not use the user's name or gendered pronouns.
+
+### Output Format
+
+Return a JSON object with the following structure:
+
+
+{
+  "constraints": [
+    {
+      "constraint_id": "C1",
+      "constraint": "The user is unavailable on Mondays from 9 AM to 11 AM.",
+      "category": "scheduling",
+      "verification_rule": "A proposed activity must not overlap with Monday 9–11 AM.",
+      "scope": "Every Monday, 9–11 AM"
+    }
+  ],
+  "unresolved_conflicts": []
+}
+
+
+If no valid constraints are identified, return an empty constraints list.
+
+### User Profile
+
+{user_profile}

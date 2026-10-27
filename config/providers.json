@@ -1,0 +1,7 @@
+{
+ "openai": {"api_key": "OPENAI_API_KEY", "base_url": "https://api.openai.com/v1"},
+ "anthropic": {"api_key": "ANTHROPIC_API_KEY"},
+ "gemini": {"api_key": "GEMINI_API_KEY", "base_url": "https://generativelanguage.googleapis.com/v1beta/openai"},
+ "deepseek": {"api_key": "DEEPSEEK_API_KEY", "base_url": "https://api.deepseek.com"},
+ "meta": {"api_key": "MUSE_API_KEY", "base_url": "https://api.meta.ai/v1"}
+}

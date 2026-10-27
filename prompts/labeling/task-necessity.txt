@@ -1,0 +1,36 @@
+### Task Necessity
+
+The user's agent will write a single reply to an incoming message (the task T) on the user's behalf. The reply is sent to a third party, such as a coordinator or colleague. The agent writes this reply using only the user's memory: it cannot ask the user, look up calendars or records, or follow up later. The reply is sent as is.
+
+Given the task and an explicit user constraint \(c\), determine whether the reply sent to the recipient must address the constraint.
+
+Input: you will receive the task as an incoming message the user's agent must reply to, and one explicit user constraint with its verification rule.
+
+A constraint is labeled Required if the reply needs to address the constraint to complete the task.
+
+A constraint is labeled Not Required if the constraint does not apply to this task.
+
+Labeling Guidelines
+
+Required (1):
+- The task requires the agent to make a coordination or arrangement that respect the constraint.
+- The task's default option conflicts with the constraint and must be modified.
+- The task contains a option that conflicts with the constraint and need coordination.
+
+Not Required (0):
+- The constraint governs only the user's own actions.
+- The constraint concerns an activity or decision unrelated to the task, or does not apply to its date, or activity.
+- The default option in the message already satisfies the constraint.
+- A conflict is possible but cannot be established without additional details.
+
+Important Rules
+- Judge necessity based only on the task and the explicit constraint, not on speculative scenarios or unstated assumptions.
+- Do not label a constraint as Required simply because it could be useful for personalization.
+- If the task does not provide enough information to establish that accommodation is required, label Not Required.
+- Refer to the user only as "the user" (they/them). Do not use the user's name or gendered pronouns.
+
+Output
+Return JSON: {"decision_or_arrangement": "the decision or proposed arrangement in the task that the constraint governs; empty if none",
+              "conflict": "what in the task would violate the constraint if it were ignored; empty if none",
+              "label": 1 | 0,
+              "reasoning": "one or two sentences"}

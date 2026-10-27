@@ -1,0 +1,22 @@
+InferPriv data license
+
+The data in this directory (data/) is licensed under the Creative Commons Attribution-NonCommercial 4.0 International
+license (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/), subject to the upstream terms below. The code
+of this repository is licensed separately under the MIT License (../LICENSE).
+
+Personas (CC BY-NC 4.0)
+  The personas and their memory statements in profiles.json are adapted from CIMemories
+  (https://huggingface.co/datasets/facebook/CIMemories; Mireshghallah et al., "CIMemories: A Compositional Benchmark
+  for Contextual Integrity of Persistent Memory in LLMs", arXiv:2511.14937), licensed under CC BY-NC 4.0. They were
+  modified for this benchmark.
+
+Sensitive statements (NVIDIA License, non-commercial)
+  The sensitive statements are derivative works of records in Privasis-Zero
+  (https://huggingface.co/datasets/nvidia/Privasis-Zero), released under the NVIDIA License, a copy of which is in
+  LICENSE-Privasis-Zero. The following files contain these derivative works and are subject to the use limitation in
+  Section 3.3 of the NVIDIA License (non-commercial use only, i.e. research or evaluation purposes only), in addition
+  to CC BY-NC 4.0:
+    statements.json
+    statements_unnamed.json
+    statements_declaration.json
+    constraints.json and need_labels.json (constraints and required content derived from these statements)
